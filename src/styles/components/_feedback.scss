@@ -1,0 +1,249 @@
+.wrapper {
+  background-color: rgb(58, 133, 190);
+  background-image: url("@img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.consult {
+  max-width: 2560px;
+  margin: 0 auto;
+  padding-top: fluid(50, 260);
+  padding-bottom: fluid(140, 400);
+
+  padding-right: fluid(30, 240, 700);
+  padding-left: fluid(30, 240, 700);
+
+  @include respond-above("2000") {
+    padding-right: fluid(20, 321, 350);
+    padding-left: fluid(20, 339, 350);
+  }
+
+  &__container {
+    display: flex;
+    gap: fluid(80, 384);
+    flex-direction: column;
+
+    align-items: center;
+
+    @include respond-above(1100) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include respond-above(1440) {
+      gap: fluid(40, 384);
+    }
+  }
+
+  &__heading {
+    @include font(fluid(30, 70), 900, 1.44, #ffffff);
+
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(1.25rem, 0.962rem + 2.2vw, 3.125rem);
+
+    @include respond-above("1100") {
+      text-align: start;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+
+    @include respond-above("700") {
+      max-width: 560px;
+    }
+
+    @include respond-above("1900") {
+      max-width: 760px;
+    }
+  }
+
+  &__in-half {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    max-width: 100%;
+    align-items: center;
+
+    @include respond-above("720") {
+      flex-wrap: nowrap;
+      gap: 2%;
+    }
+
+    &--name {
+      display: flex;
+      gap: 25px;
+      justify-content: space-between;
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__invalidText {
+    margin-top: 8px;
+    padding-left: 20px;
+    @include font(14px, 500, 19px, #ff3b3b);
+    flex-basis: 100%;
+    position: absolute;
+    @include text-shorten();
+    display: none;
+
+    &--name {
+      padding-left: 10px;
+    }
+
+    @include respond-above("720") {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    @include font(fluid(18, 30), 700, 1.2, white);
+    background-color: #01d1ff;
+    min-width: 264px;
+    text-transform: uppercase;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    padding: clamp(1.25rem, 0.469vw, 2.5rem);
+
+    @include respond-above("720") {
+      width: auto;
+    }
+  }
+
+  .disabled {
+    background-color: #eaeaea;
+    color: #4b4b4b;
+    cursor: default;
+  }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    padding-left: 10px;
+    cursor: pointer;
+
+    @include respond-above("1440") {
+      padding-left: 20px;
+    }
+  }
+
+  &__circle {
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+    border: 3px solid #ffffff;
+    outline-offset: 5px;
+    margin-right: 13px;
+    flex-shrink: 0;
+  }
+
+  &__label-text {
+    @include font(fluid(14, 20), 500, 1.2, white);
+    border-radius: 80px;
+  }
+
+  @media screen and (min-width: 991px) {
+    &__heading {
+      font-size: 46px;
+    }
+  }
+}
+
+.consult__input {
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 80px;
+  outline: none;
+  padding: clamp(1.25rem, 1.01rem + 0.262vw, 2.813rem);
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.relative {
+  position: relative;
+
+  &--name,
+  &--surname {
+    @include respond-above("570") {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.star {
+  @include font(80px, 500, 97px, #ff3c3c);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  display: none;
+  right: 23px;
+}
+
+.consult__input::placeholder {
+  @include font(18px, 500, 1.2, white);
+
+  @include respond-above("720") {
+    font-size: 25px;
+  }
+}
+
+.consult__input:invalid:not(:focus):not(:placeholder-shown) + .star {
+  display: block;
+}
+
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)
+  ~ .consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown)
+  ~ .consult__invalidText {
+  display: -webkit-box;
+}
+
+.consult__input:invalid:not(:focus):not(:placeholder-shown)
+  ~ .consult__invalidText {
+  display: -webkit-box;
+}
+
+//checkbox
+
+.checkbox:checked + .consult__circle {
+  background: #d9d9d9;
+  border: 3px solid #eaeaea;
+}
+
+.succes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  @include respond-above("720") {
+    max-width: 660px;
+  }
+
+  @include respond-above("1900") {
+    max-width: 800px;
+  }
+}
+
+.succes__title {
+  @include font(fluid(60, 80), 700, 1, white);
+}
+
+.succes__text {
+  @include font(16px, 500, 1.2, white);
+}

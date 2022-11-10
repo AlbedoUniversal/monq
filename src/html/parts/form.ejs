@@ -1,0 +1,109 @@
+<section class="consult" id="get">
+  <div class="consult__container">
+    <h2 class="consult__heading">
+      ПОЛУЧИТЬ<br />
+      КОНСУЛЬТАЦИЮ
+    </h2>
+    <form class="consult__form" id="form">
+      <div>
+        <div class="consult__in-half--name">
+          <div class="relative relative--name">
+            <input
+              aria-label="Имя"
+              id="name"
+              class="consult__input consult__input--name"
+              name="name"
+              type="text"
+              placeholder="Имя*"
+              autocomplete="off"
+              required
+              minlength="2"
+            />
+            <span class="star">*</span>
+            <p class="consult__invalidText consult__invalidText--name">
+              Необходимо заполнить поле “Имя”
+            </p>
+          </div>
+          <div class="relative relative--surname">
+            <input
+              class="consult__input consult__input--surname"
+              name="surname"
+              type="text"
+              placeholder="Фамилия*"
+              autocomplete="off"
+              required
+              minlength="2"
+            />
+            <span class="star">*</span>
+            <p class="consult__invalidText consult__invalidText--name">
+              Необходимо заполнить поле “Фамилия”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <input
+          aria-label="Название организации"
+          class="consult__input"
+          name="organization"
+          type="text"
+          placeholder="Название организации*"
+          required
+          minlength="3"
+        />
+        <span class="star">*</span>
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Название организации”
+        </p>
+      </div>
+      <div class="relative">
+        <input
+          class="consult__input"
+          name="phone"
+          data-tel-input
+          type="tel"
+          placeholder="Телефон*"
+          pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+          required
+        />
+        <span class="star">*</span>
+
+        <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
+      </div>
+      <div class="relative">
+        <input
+          class="consult__input"
+          name="email"
+          type="email"
+          placeholder="Электронная почта*"
+          required
+        />
+        <span class="star">*</span>
+
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Электронная почта”
+        </p>
+      </div>
+      <div class="consult__in-half">
+        <button class="consult__button disabled" type="submit">
+          отправить
+        </button>
+        <label class="consult__checkbox-label">
+          <input
+            class="_visuallyhidden checkbox"
+            name="agreement"
+            value="yes"
+            type="checkbox"
+            required
+          />
+          <span class="consult__circle"></span>
+          <a href="/policy.pdf" target="_blank">
+            <span class="consult__label-text"
+              >Согласен на обработку персональных данных</span
+            >
+          </a>
+        </label>
+      </div>
+    </form>
+  </div>
+</section>
