@@ -38,7 +38,7 @@
 }
 
 @function rem($size) {
-  $remValue: math.div($size, 16);
+  $remValue: math.div($size, 18);
   $roundedValue: decimal-round($remValue, 3) * 1rem;
 
   @return $roundedValue;

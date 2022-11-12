@@ -5,20 +5,20 @@
 html {
   line-height: $mainLineHeight;
   font-size: $mainFontSize;
-  color: $mainFontColor;
+  color: $c-black;
   height: 100%;
 
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
+  // @media screen and (max-width: $desktopWidth) {
+  //   font-size: 16px;
+  // }
 
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
+  // @media screen and (max-width: $tableWidth) {
+  //   font-size: 15px;
+  // }
 
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
+  // @media screen and (max-width: $phoneWidth) {
+  //   font-size: 14px;
+  // }
 }
 
 body {
@@ -52,6 +52,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 p,
 ul,
