@@ -1,38 +1,55 @@
 // font
-$mainFont: "Inter-Regular", Helvetica, Arial, sans-serif;
+$mainFont: 'HelveticaNeueCyr-Roman', Helvetica, Arial, sans-serif;
+
+//Font Size
+$fs-85: rem(85);
+$fs-80: rem(80);
+$fs-70: rem(70);
+$fs-60: rem(60);
+$fs-50: rem(50);
+$fs-45: rem(45);
+$fs-40: rem(40);
+$fs-35: rem(35);
+$fs-25: rem(25);
+$fs-20: rem(20);
+$fs-17: rem(17);
+$fs-16: rem(16);
+$fs-15: rem(15);
+$fs-13: rem(13);
+$fs-11: rem(11);
 
 // Size
 $mainFontSize: 18px;
 $mainFontWeight: 400;
 $mainLineHeight: 1.4;
 
-$desktopWidth  : 1500px;
+$desktopWidth: 1500px;
 $smDesktopWidth: 980px;
-$tableWidth    : 768px;
-$phoneWidth    : 480px;
-$smPhoneWidth  : 320px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
 
 // Main Color
-$mainFontColor   :#646464;
-$c-white         :#ffffff;
-$c-black         :#000000;
-$c-dark          :#333333;
-$c-light         :#F4F4F4;
-$c-grey          :#767676;
-$c-lightGrey     :#CDCDCD;
-$c-darkGrey      :#666666;
-$c-silver        :#ACA6A6;
-$c-lightSelver   :#A3A3A3;
-$c-opacityGrey   :#e2dddd33;
-$c-borderGrey    :#C1C1C1;
-$c-lightGrey     :#9E9E9E;
-$c-textGrey      :#AAAAAA;
-$c-activeDark    :#060606;
-$c-bgFooter      :#161616;
-$c-accentOrange  :#F9AB03;
-$c-hoverOrange   :#e49d04;
-$c-error         :#FF000F;
-$c-sliderPrev    :#B9B9B9;
-$c-sliderPrevBtn :#9e9e9e44;
-$c-sliderPrevBtns:#b11b1b44;
-$c-controlBorder :#999B9D;
+$mainFontColor: #646464;
+$c-white: #ffffff;
+$c-black: #000000;
+$c-dark: #333333;
+$c-light: #f4f4f4;
+$c-grey: #767676;
+$c-lightGrey: #cdcdcd;
+$c-darkGrey: #666666;
+$c-silver: #aca6a6;
+$c-lightSelver: #a3a3a3;
+$c-opacityGrey: #e2dddd33;
+$c-borderGrey: #c1c1c1;
+$c-lightGrey: #9e9e9e;
+$c-textGrey: #aaaaaa;
+$c-activeDark: #060606;
+$c-bgFooter: #161616;
+$c-accentOrange: #f9ab03;
+$c-hoverOrange: #e49d04;
+$c-error: #ff000f;
+$c-sliderPrev: #b9b9b9;
+$c-sliderPrevBtn: #9e9e9e44;
+$c-sliderPrevBtns: #b11b1b44;
+$c-controlBorder: #999b9d;

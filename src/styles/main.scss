@@ -1,71 +1,70 @@
-
 @import './utils/vars.scss';
 
 html {
-	overflow: auto;
+  overflow: auto;
 }
 
 #main {
-	max-width: $desktopWidth;
-	margin: 0 auto;
-	padding: 0 75px;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  padding: 0 75px;
 
-	// overflow: hidden;
+  // overflow: hidden;
 
-	@media screen and (max-width: 991px) {
-		padding: 0 15px;
-	}
+  @media screen and (max-width: 991px) {
+    padding: 0 15px;
+  }
 }
 
 .main {
-	position: absolute;
-    z-index: 5;
-    left: 0;
-    right: 0;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 
-	.header {
-		background: transparent;
+  .header {
+    background: transparent;
 
-		@media screen and (max-width: 930px) {
-			background-color: $c-white;
-		}
-	}
+    @media screen and (max-width: 930px) {
+      background-color: $c-white;
+    }
+  }
 }
 
 .black-text {
-	color: $c-dark;
+  color: $c-dark;
 }
 
 .orange-text {
-	color: $c-accentOrange;
+  color: $c-accentOrange;
 }
 
 .spacer-xl {
-	height: 150px
+  height: 150px;
 }
 
 .spacer-md {
-	height: 85px
+  height: 85px;
 }
 
 .spacer-sm {
-	height: 40px
+  height: 40px;
 }
 
 .spacer-xsm {
-	height: 30px
+  height: 30px;
 }
 
 @import './utils/style.scss';
 @import './components/header.scss';
-@import './components/grid.scss';
-@import './components/feedback.scss';
-@import './components/footer.scss';
+// @import './components/grid.scss';
+// @import './components/feedback.scss';
+// @import './components/footer.scss';
 
-@import './components/decorBox.scss';
-@import './components/infoBlock.scss';
-@import './components/slider.scss';
-@import './components/map.scss';
-@import './components/textBlock.scss';
-@import './components/aboute.scss';
-@import './components/contactsBlock.scss';
+// @import './components/decorBox.scss';
+// @import './components/infoBlock.scss';
+// @import './components/slider.scss';
+// @import './components/map.scss';
+// @import './components/textBlock.scss';
+// @import './components/aboute.scss';
+// @import './components/contactsBlock.scss';

@@ -1,44 +1,44 @@
 @import './vars.scss';
 @import './fonts.scss';
+@import './utils.scss';
 
 html {
-	line-height: $mainLineHeight;
-	font-size: $mainFontSize;
-	color: $mainFontColor;
-	height: 100%;
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
 
-	@media screen and (max-width: $desktopWidth) {
-			font-size: 16px;
-	}
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
 
-	@media screen and (max-width: $tableWidth) {
-		font-size: 15px;
-	}
-	
-	@media screen and (max-width: $phoneWidth) {
-		font-size: 14px;
-	}
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: $mainFont;
-	font-size: $mainFontSize;
-	font-weight: $mainFontWeight;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-	// position: relative;
+  // position: relative;
 
-	overflow-x: hidden;
-
+  overflow-x: hidden;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -47,36 +47,35 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 p,
 ul,
 li {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
   transition: background-color 5000s;
-//   -webkit-text-fill-color: #fff !important;
+  //   -webkit-text-fill-color: #fff !important;
 }
 
 .form__name,
 .form__email,
 .form__message {
-	&:-webkit-autofill,
-	&:-webkit-autofill:hover, 
-	&:-webkit-autofill:focus, 
-	&:-webkit-autofill:active {
-		  -webkit-text-fill-color: $c-white !important;
-	}
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: $c-white !important;
+  }
 }
-
