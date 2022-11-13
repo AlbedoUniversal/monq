@@ -1,0 +1,15 @@
+.monitoring {
+  display: flex;
+  flex-direction: row;
+
+  &__control {
+    width: rem(796);
+    height: rem(815);
+
+    background-image: url('../assets/images/control-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__form {}
+}

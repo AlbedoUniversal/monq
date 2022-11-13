@@ -1,0 +1,49 @@
+.consult {
+  &__input {
+    width: rem(750);
+    height: rem(93);
+    border-radius: 80px 80px 80px 80px;
+
+    &::placeholder {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(30);
+      line-height: rem(36);
+      color: $c-black;
+      padding-left: rem(32);
+    }
+
+    @media (max-width: $DesktopWidth) {
+      width: rem(560);
+      height: rem(70);
+
+      &::placeholder {
+        font-size: rem(25);
+        line-height: rem(30);
+      }
+    }
+
+    @media (max-width: $smDesktopWidth) {
+      width: rem(560);
+      height: rem(70);
+
+      &::placeholder {
+        font-size: rem(15);
+        line-height: rem(18);
+      }
+    }
+
+    @media (max-width: $tableWidth) {
+      width: rem(560);
+      height: rem(70);
+
+      &::placeholder {
+        font-size: rem(25);
+        line-height: rem(30);
+      }
+
+    }
+
+  }
+}

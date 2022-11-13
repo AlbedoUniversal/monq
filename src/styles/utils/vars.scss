@@ -1,5 +1,8 @@
 // font
-$mainFont: 'HelveticaNeueCyr-Roman', Helvetica, Arial, sans-serif;
+$mainFont: 'HelveticaNeueCyr-Roman',
+Helvetica,
+Arial,
+sans-serif;
 
 //Font Size
 $fs-85: rem(85);
@@ -23,11 +26,12 @@ $mainFontSize: 18px;
 $mainFontWeight: 400;
 $mainLineHeight: 1.4;
 
-$desktopWidth: 1500px;
-$smDesktopWidth: 980px;
-$tableWidth: 768px;
+$maxdesktopWidth: 2560px;
+$DesktopWidth: 1920px;
+$smDesktopWidth: 1280px;
+$tableWidth: 720px;
 $phoneWidth: 480px;
-$smPhoneWidth: 320px;
+$smPhoneWidth: 375px;
 
 // Main Color
 $mainFontColor: #646464;
