@@ -1,8 +1,34 @@
 .consult {
-  &__input {
+
+  &__container {
     width: rem(750);
-    height: rem(93);
+
+    @media (max-width: $DesktopWidth) {
+      width: rem(560);
+    }
+
+    @media (max-width: $smDesktopWidth) {
+      width: rem(560);
+    }
+
+    @media (max-width: $tableWidth) {
+      width: rem(560);
+    }
+  }
+
+  &__input {
+    width: 100%;
     border-radius: 80px 80px 80px 80px;
+    padding: 25px 30px;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(30);
+    line-height: rem(36);
+    color: $c-black;
+
+
 
     &::placeholder {
       font-family: 'Gilroy';
@@ -11,12 +37,11 @@
       font-size: rem(30);
       line-height: rem(36);
       color: $c-black;
-      padding-left: rem(32);
     }
 
     @media (max-width: $DesktopWidth) {
-      width: rem(560);
-      height: rem(70);
+      font-size: rem(25);
+      line-height: rem(30);
 
       &::placeholder {
         font-size: rem(25);
@@ -25,8 +50,8 @@
     }
 
     @media (max-width: $smDesktopWidth) {
-      width: rem(560);
-      height: rem(70);
+      font-size: rem(15);
+      line-height: rem(18);
 
       &::placeholder {
         font-size: rem(15);
@@ -35,8 +60,8 @@
     }
 
     @media (max-width: $tableWidth) {
-      width: rem(560);
-      height: rem(70);
+      font-size: rem(25);
+      line-height: rem(30);
 
       &::placeholder {
         font-size: rem(25);
@@ -44,6 +69,25 @@
       }
 
     }
+
+  }
+
+  &__button {
+    width: 100%;
+    border-radius: 80px 80px 80px 80px;
+    padding: 16px 120px;
+    border: none;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(25);
+    line-height: rem(31);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $c-button;
+
+    color: $c-white;
 
   }
 }
