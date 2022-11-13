@@ -4,9 +4,10 @@ import './styles/main.scss';
 
 const navigation = document.querySelector('.header__nav');
 const menu = document.querySelector('.header__menu');
+const menuBurger = document.querySelector('.header__menu-burger');
 const phone = document.querySelector('.header__phone');
 
-navigation.addEventListener('click', () => {
+menuBurger.addEventListener('click', () => {
   // The navigation.children.length means the following :-
   // The children inside a parent are basically an array of elements; So, here I'm finding the length of the array aka how many children are inside the nav bar.
   //   Yup That's all.

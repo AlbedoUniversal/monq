@@ -44,5 +44,10 @@
     text-transform: uppercase;
     color: $c-white;
     cursor: pointer;
+    align-self: center;
+
+    @include respond-above(1280px) {
+      align-self: start;
+    }
   }
 }
