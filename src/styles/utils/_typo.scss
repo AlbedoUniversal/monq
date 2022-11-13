@@ -1,8 +1,9 @@
 @use 'sass:list';
 @use 'sass:math';
 @use 'sass:meta';
-@use '../vars/colors' as *;
-@use './media' as *;
+
+@import './media.scss';
+@import './vars.scss';
 
 @mixin headingH1($args...) {
   $color: argsColorHandler($args);
@@ -10,8 +11,8 @@
 
   color: $color;
   font-weight: $fw;
-  font-size: $fs-34;
-  line-height: 1.2;
+  font-size: $fs-30;
+  line-height: rem(30);
 }
 
 //Чтобы можно было докинуть один или два аргумента в миксинчик
