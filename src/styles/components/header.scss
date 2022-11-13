@@ -24,7 +24,7 @@
     visibility: hidden;
     font-weight: bold;
 
-    @include headingH1(700);
+    @include numberText();
 
     &--active {
       visibility: visible;

@@ -15,6 +15,31 @@
   line-height: rem(30);
 }
 
+@mixin numberText($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-16;
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+  }
+}
+
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {
   $fw: $initValue;
@@ -36,4 +61,26 @@
   @if (list.length($args) > 2) {
     @error "максимум 2 аргумента";
   }
+}
+
+@function argsColorHandler($args) {
+  $color: $c-dark;
+
+  @if (list.length($args) > 1) {
+    $color: list.nth($args, 1);
+  }
+
+  @if (list.length($args) == 1) {
+    $first: list.nth($args, 1);
+
+    @if (meta.type-of($first) != 'number') {
+      $color: $first;
+    }
+  }
+
+  @if (list.length($args) > 2) {
+    @error "максимум 2 аргумента";
+  }
+
+  @return $color;
 }
