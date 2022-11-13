@@ -1,8 +1,5 @@
 // font
-$mainFont: 'HelveticaNeueCyr-Roman',
-Helvetica,
-Arial,
-sans-serif;
+$mainFont: 'HelveticaNeueCyr-Roman', Helvetica, Arial, sans-serif;
 
 //Font Size
 $fs-85: rem(85);
@@ -40,8 +37,10 @@ $mainFontColor: #646464;
 $c-white: #ffffff;
 $c-black: #000000;
 $c-dark: #333333;
-$c-light: #f4f4f4;
+$c-light: #f5f5f5;
 $c-grey: #f3f3f3;
+$c-blue: #2f69ff;
+$c-accentOrange: rgba(255, 146, 46, 0.93);
 $c-lightGrey: #cdcdcd;
 $c-darkGrey: #666666;
 $c-silver: #aca6a6;
@@ -52,7 +51,6 @@ $c-lightGrey: #9e9e9e;
 $c-textGrey: #aaaaaa;
 $c-activeDark: #060606;
 $c-bgFooter: #161616;
-$c-accentOrange: #f9ab03;
 $c-hoverOrange: #e49d04;
 $c-error: #ff000f;
 $c-sliderPrev: #b9b9b9;

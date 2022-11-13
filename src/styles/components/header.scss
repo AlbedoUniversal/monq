@@ -11,10 +11,29 @@
   }
 
   &__logo {
-    height: 30px;
+    height: rem(36);
+
+    @include respond-above(720px) {
+      height: rem(80);
+    }
+    @include respond-above(1280px) {
+      height: rem(52);
+    }
+    @include respond-above(1920) {
+      height: rem(80);
+    }
+    @include respond-above(2560px) {
+      height: rem(108);
+    }
   }
 
   &__right-side {
+    display: flex;
+    gap: rem(60);
+    align-items: center;
+    & a {
+      @include text2($c-black, 700);
+    }
   }
 
   &__phone {
@@ -23,6 +42,9 @@
     visibility: hidden;
 
     @include text1(700);
+    @include respond-above(1280px) {
+      display: none;
+    }
 
     &--near-menu {
       display: none;
@@ -37,7 +59,7 @@
   }
 
   &__inner {
-    padding: rem(55) 0;
+    padding: rem(44) 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -49,11 +71,11 @@
     overflow: hidden;
     display: flex;
     gap: rem(15);
-    padding: 0 rem(60);
     flex-direction: column;
 
     &--active {
-      margin-top: rem(15);
+      padding-inline: rem(60);
+      padding-block: rem(40);
       max-height: 100vh;
       transition: all 0.5s ease-in;
     }

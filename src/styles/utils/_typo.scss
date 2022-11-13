@@ -5,14 +5,29 @@
 @import './media.scss';
 @import './vars.scss';
 
-@mixin headingH1($args...) {
+@mixin headingText($args...) {
   $color: argsColorHandler($args);
   $fw: argsFwHandler($args, 500);
 
   color: $color;
   font-weight: $fw;
   font-size: $fs-30;
-  line-height: rem(30);
+
+  @include respond-above(720px) {
+    font-size: $fs-60;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-45;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-70;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-85;
+  }
 }
 
 @mixin text1($args...) {
@@ -29,6 +44,48 @@
 
   @include respond-above(2560px) {
     font-size: $fs-40;
+  }
+}
+
+@mixin text2($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+  }
+}
+
+@mixin text3($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-35;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-45;
   }
 }
 
