@@ -12,19 +12,24 @@
 
   &__logo {
     height: 30px;
+  }
 
-    @include respond-above(700px) {
-      height: 60px;
-    }
+  &__right-side {
   }
 
   &__phone {
     position: absolute;
     top: rem(15);
     visibility: hidden;
-    font-weight: bold;
 
-    @include numberText();
+    @include text1(700);
+
+    &--near-menu {
+      display: none;
+      @include respond-above(1280px) {
+        display: block;
+      }
+    }
 
     &--active {
       visibility: visible;
@@ -32,7 +37,7 @@
   }
 
   &__inner {
-    padding-top: rem(55);
+    padding: rem(55) 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -77,9 +82,16 @@
     }
   }
 
-  &__menu-item {
-    border-bottom: 6px solid #f3f3f3;
+  &__menu-item a {
+    text-transform: uppercase;
+    @include text1($c-black, 600);
+  }
+
+  &__menu-divider {
+    height: rem(6);
     border-radius: 30px;
+    background-color: $c-grey;
+    border: none;
   }
 
   &__menu-burger span {

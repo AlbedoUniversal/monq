@@ -15,7 +15,7 @@
   line-height: rem(30);
 }
 
-@mixin numberText($args...) {
+@mixin text1($args...) {
   $color: argsColorHandler($args);
   $fw: argsFwHandler($args, 500);
 
@@ -24,14 +24,6 @@
   font-size: $fs-16;
 
   @include respond-above(720px) {
-    font-size: $fs-30;
-  }
-
-  @include respond-above(1280px) {
-    font-size: $fs-20;
-  }
-
-  @include respond-above(1920px) {
     font-size: $fs-30;
   }
 
