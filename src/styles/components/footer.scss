@@ -1,0 +1,46 @@
+.footer {
+  background-color: $c-white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 rem(45);
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+
+
+  }
+
+  &__adress {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__adress-link {
+    width: 430px;
+    height: 46px;
+  }
+
+  &__contacts-link {
+    display: flex;
+    width: 430px;
+    height: 46px;
+  }
+
+
+
+  &__contacts-img {
+    width: 22px;
+    height: 22px;
+    margin-right: 37px;
+  }
+
+}

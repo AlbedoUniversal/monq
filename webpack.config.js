@@ -18,7 +18,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const putFilesToDist = (folder) =>
   devMode ? `${folder}/[name][ext]` : `${folder}/[name].[contenthash][ext]`;
 
-const pages = ['index', 'header'];
+const pages = ['index', 'header', 'footer'];
 
 const htmlPages = pages.map((page) => {
   return new HtmlWebpackPlugin({
