@@ -1,10 +1,15 @@
 import './styles/main.scss';
+import './postForm';
+import phoneinput from './phoneinput';
 
 // For toggling and finding number of children and other stuff is done here!
 
 const navigation = document.querySelector('.header__nav');
 const menu = document.querySelector('.header__menu');
 const phone = document.querySelector('.header__phone');
+
+
+phoneinput()
 
 navigation.addEventListener('click', () => {
   // The navigation.children.length means the following :-
