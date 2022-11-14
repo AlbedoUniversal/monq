@@ -3,6 +3,7 @@
 @import 'utils';
 @import 'typo';
 @import 'media';
+@import 'fluid';
 
 html {
   line-height: $mainLineHeight;
@@ -75,6 +76,7 @@ input:-webkit-autofill:active {
 .form__name,
 .form__email,
 .form__message {
+
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,

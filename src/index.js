@@ -1,4 +1,6 @@
 import './styles/main.scss';
+import './postForm';
+import phoneinput from './phoneinput';
 
 // For toggling and finding number of children and other stuff is done here!
 

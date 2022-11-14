@@ -68,5 +68,5 @@ export function postForm() {
 }
 
 function createName(data) {
-  return `${data.get("name")} ${data.get("surname")}`;
+  return `${data.get("name")} `;
 }

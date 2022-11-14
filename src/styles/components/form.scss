@@ -1,15 +1,11 @@
 .consult {
 
+
+
   &__container {
-    width: rem(750);
+    width: fluid(385, 750);
 
-    @media (max-width: $DesktopWidth) {
-      width: rem(560);
-    }
 
-    @media (max-width: $smDesktopWidth) {
-      width: rem(560);
-    }
 
     @media (max-width: $tableWidth) {
       width: rem(560);
@@ -24,7 +20,7 @@
     font-family: 'Gilroy';
     font-style: normal;
     font-weight: 500;
-    font-size: rem(30);
+    font-size: fluid(15, 30);
     line-height: rem(36);
     color: $c-black;
 
@@ -34,30 +30,11 @@
       font-family: 'Gilroy';
       font-style: normal;
       font-weight: 500;
-      font-size: rem(30);
-      line-height: rem(36);
+      font-size: fluid(15, 30);
+      line-height: fluid(18, 36);
       color: $c-black;
     }
 
-    @media (max-width: $DesktopWidth) {
-      font-size: rem(25);
-      line-height: rem(30);
-
-      &::placeholder {
-        font-size: rem(25);
-        line-height: rem(30);
-      }
-    }
-
-    @media (max-width: $smDesktopWidth) {
-      font-size: rem(15);
-      line-height: rem(18);
-
-      &::placeholder {
-        font-size: rem(15);
-        line-height: rem(18);
-      }
-    }
 
     @media (max-width: $tableWidth) {
       font-size: rem(25);
@@ -75,18 +52,17 @@
   &__button {
     width: 100%;
     border-radius: 80px 80px 80px 80px;
-    padding: 16px 120px;
+    padding: 16px 90px;
     border: none;
 
     font-family: 'Gilroy';
     font-style: normal;
     font-weight: 700;
-    font-size: rem(25);
-    line-height: rem(31);
+    font-size: fluid(15, 30);
+    line-height: fluid(18, 37);
     text-align: center;
     text-transform: uppercase;
     background-color: $c-button;
-
     color: $c-white;
 
   }
