@@ -89,6 +89,56 @@
   }
 }
 
+@mixin text4($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+  }
+}
+
+@mixin text5($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-13;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-13;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+  }
+}
+
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {
   $fw: $initValue;

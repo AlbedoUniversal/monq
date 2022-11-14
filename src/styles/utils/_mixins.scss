@@ -1,0 +1,18 @@
+@mixin container {
+  padding: 0 rem(45);
+  @include respond-above(720px) {
+    padding: 0 rem(55);
+  }
+
+  @include respond-above(1280px) {
+    padding: 0 rem(180);
+  }
+
+  @include respond-above(1920px) {
+    padding: 0 rem(280);
+  }
+
+  @include respond-above(2560px) {
+    padding: 0 rem(300);
+  }
+}

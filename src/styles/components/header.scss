@@ -2,7 +2,7 @@
   background-color: $c-grey;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 rem(45);
+  @include container();
 
   &__nav {
     display: flex;
