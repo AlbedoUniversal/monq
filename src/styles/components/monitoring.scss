@@ -11,13 +11,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: rem(796);
-    height: rem(815);
+    width: fluid(375, 1100);
+    height: fluid(400, 1200);
 
     background-image: url('../assets/images/control-image.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+
   }
 
   &__form {
