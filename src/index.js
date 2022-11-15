@@ -8,18 +8,25 @@ const navigation = document.querySelector('.header__nav');
 const menu = document.querySelector('.header__menu');
 const menuBurger = document.querySelector('.header__menu-burger');
 const phone = document.querySelector('.header__phone');
+const openModal = document.querySelector('.umbrellaMonitoring__more');
+const modal = document.querySelector('.modal');
+const closeModal = modal.querySelector('.modal__close-button');
 
 phoneInput();
 postForm();
-menuBurger.addEventListener('click', () => {
-  // The navigation.children.length means the following :-
-  // The children inside a parent are basically an array of elements; So, here I'm finding the length of the array aka how many children are inside the nav bar.
-  //   Yup That's all.
-  // navigation.style.setProperty('--childenNumber', navigation.children.length);
 
-  //    Casually Toggling Classes to make them animate on click
-  //   Regular stuff ;)
+menuBurger.addEventListener('click', () => {
   navigation.classList.toggle('header__menu-burger--active');
   menu.classList.toggle('header__menu--active');
   phone.classList.toggle('header__phone--active');
+});
+
+openModal.addEventListener('click', () => {
+  document.body.classList.add('modal__non-scroll');
+  modal.classList.add('modal--active');
+});
+
+closeModal.addEventListener('click', () => {
+  document.body.classList.remove('modal__non-scroll');
+  modal.classList.remove('modal--active');
 });
