@@ -1,9 +1,7 @@
 .consult {
-
   width: 100%;
   display: flex;
   justify-content: center;
-
 
   &__form {
     display: flex;
@@ -16,10 +14,9 @@
     }
   }
 
-  input[type="checkbox"i] {
+  input[type='checkbox'i] {
     display: none;
   }
-
 
   &__invalidText {
     margin-top: 8px;
@@ -43,11 +40,10 @@
     cursor: pointer;
     width: 100%;
     padding: clamp(1.25rem, 0.469vw, 2.5rem);
-    font-family: "Gilroy";
+    font-family: 'Gilroy';
     color: $c-white;
     font-size: fluid(15, 30);
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
-
   }
 
   // .disabled {
@@ -62,7 +58,7 @@
     user-select: none;
     padding-left: 10px;
     cursor: pointer;
-    font-family: "Gilroy";
+    font-family: 'Gilroy';
 
     @include respond-above('1440') {
       padding-left: 20px;
@@ -81,9 +77,9 @@
 
   &__label-text {
     font-size: fluid(14, 25);
-    color: #A0A0A0;
+    color: #a0a0a0;
     text-decoration: underline;
-    font-family: "Gilroy";
+    font-family: 'Gilroy';
   }
 
   @media screen and (min-width: 991px) {
@@ -105,7 +101,6 @@
   color: $c-black;
   font-size: fluid(12, 30);
   font-family: Gilroy;
-
 }
 
 .relative {
@@ -130,31 +125,30 @@
   font-weight: 500;
   color: #ff3c3c;
   line-height: 97px;
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
 }
 
 .consult__input::placeholder {
   color: $c-black;
-  font-family: "Gilroy";
-
+  font-family: 'Gilroy';
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
+.consult__input:invalid:not(:focus):not(:placeholder-shown) + .star {
   display: block;
 }
 
-.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText,
-.consult__input--name:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText {
   display: -webkit-box;
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
+.consult__input:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText {
   display: -webkit-box;
 }
 
 //checkbox
 
-.checkbox:checked+.consult__circle {
+.checkbox:checked + .consult__circle {
   background: #d9d9d9;
   border: 3px solid rgba(195, 195, 195, 1);
 }
