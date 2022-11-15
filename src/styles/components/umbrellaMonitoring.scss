@@ -68,6 +68,17 @@
     flex-wrap: wrap;
     gap: rem(30);
     margin-top: 3em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/images/discount.png');
+      height: 8em;
+      width: 7em;
+      background-repeat: no-repeat;
+      right: -8em;
+    }
   }
 
   &__advantages-item {
