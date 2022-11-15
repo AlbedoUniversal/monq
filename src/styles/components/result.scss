@@ -39,9 +39,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 
     @media (max-width: 1000px) {
-      margin: 0 265px;
+      max-width: 350px;
     }
   }
 

@@ -27,7 +27,7 @@
     font-weight: 500;
     color: #ff3b3b;
     flex-basis: 100%;
-    font-size: fluid(14, 25);
+    font-size: fluid(11, 25);
   }
 
   &__button {
@@ -133,22 +133,22 @@
   font-family: 'Gilroy';
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown) + .star {
+.consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
   display: block;
 }
 
-.consult__input--surname:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText,
-.consult__input--name:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText {
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
   display: -webkit-box;
 }
 
-.consult__input:invalid:not(:focus):not(:placeholder-shown) ~ .consult__invalidText {
+.consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
   display: -webkit-box;
 }
 
 //checkbox
 
-.checkbox:checked + .consult__circle {
+.checkbox:checked+.consult__circle {
   background: #d9d9d9;
   border: 3px solid rgba(195, 195, 195, 1);
 }
