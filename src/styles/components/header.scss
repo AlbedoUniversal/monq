@@ -71,6 +71,7 @@
     overflow: hidden;
     display: flex;
     gap: rem(15);
+    height: 100vh;
     flex-direction: column;
 
     &--active {
