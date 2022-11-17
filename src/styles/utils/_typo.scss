@@ -164,6 +164,74 @@
   }
 }
 
+@mixin resultTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+    line-height: 40px;
+  }
+}
+
+@mixin resultDescr($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {
   $fw: $initValue;
@@ -172,10 +240,10 @@
     $fw: list.nth($args, 2);
   }
 
-  @if (list.length($args) == 1) {
+  @if (list.length($args)==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first) == 'number') {
+    @if (meta.type-of($first)=='number') {
       $fw: $first;
     }
   }
@@ -194,10 +262,10 @@
     $color: list.nth($args, 1);
   }
 
-  @if (list.length($args) == 1) {
+  @if (list.length($args)==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first) != 'number') {
+    @if (meta.type-of($first) !='number') {
       $color: $first;
     }
   }
