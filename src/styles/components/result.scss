@@ -8,6 +8,12 @@
   background-position: right;
   background-size: 22%;
 
+  @media (min-width: 1000px) {
+    background-image: url(../assets/images/result-bg-max.png);
+    background-position: bottom;
+  }
+
+
   &__title {
     display: flex;
     justify-content: center;
@@ -40,16 +46,29 @@
     flex-direction: column;
     gap: 10px;
     flex: 1;
+    min-height: 450px;
+
+    &::before {
+      content: url('../assets/images/result-circle.png');
+      position: relative;
+      right: 50px;
+      top: 75px;
+
+    }
 
     @media (max-width: 1000px) {
       max-width: 350px;
     }
   }
 
+  &__item-line {
+    background-color: red;
+    height: 0.3em;
+  }
+
+
   &__item-title {
-    font-weight: 900;
-    font-size: fluid(20, 40);
-    line-height: fluid(20, 40);
+    @include resultTitle($c-white, 900);
   }
 
   &__item-title::first-line {
@@ -57,10 +76,8 @@
   }
 
   &__item-descr {
-    font-weight: 300;
-    font-size: fluid(12, 35);
-    line-height: 25px;
     font-family: "HelveticaNeueCyr-Light";
+    @include resultDescr($c-white, 300);
   }
 
   &__item-perсent {
