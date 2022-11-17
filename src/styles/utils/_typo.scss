@@ -232,6 +232,40 @@
   }
 }
 
+@mixin resultPercent($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-40;
+    line-height: 40px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-80;
+    line-height: 80px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-60;
+    line-height: 60px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-80;
+    line-height: 80px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-90;
+    line-height: 90px;
+  }
+}
+
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {
   $fw: $initValue;

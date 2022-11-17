@@ -7,10 +7,12 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 22%;
+  height: 70vh;
 
   @media (min-width: 1000px) {
     background-image: url(../assets/images/result-bg-max.png);
     background-position: bottom;
+    background-size: contain;
   }
 
 
@@ -29,8 +31,8 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+    width: 100%;
 
     @media (min-width: 1000px) {
       flex-direction: row;
@@ -39,6 +41,7 @@
   }
 
   &__item {
+    position: relative;
     color: $c-white;
     font-family: 'HelveticaNeueCyr-Black';
     font-style: normal;
@@ -46,15 +49,9 @@
     flex-direction: column;
     gap: 10px;
     flex: 1;
-    min-height: 450px;
+    max-width: 310px;
 
-    &::before {
-      content: url('../assets/images/result-circle.png');
-      position: relative;
-      right: 50px;
-      top: 75px;
 
-    }
 
     @media (max-width: 1000px) {
       max-width: 350px;
@@ -64,6 +61,14 @@
   &__item-line {
     background-color: red;
     height: 0.3em;
+  }
+
+
+  &__item-svg {
+    position: absolute;
+    height: 100%;
+    left: -40px;
+    bottom: -57px;
   }
 
 
@@ -81,7 +86,7 @@
   }
 
   &__item-perсent {
-    font-size: fluid(40, 90);
+    @include resultPercent($c-white, 900)
   }
 
   &__button {
