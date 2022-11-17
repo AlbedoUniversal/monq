@@ -78,6 +78,10 @@
       width: 7em;
       background-repeat: no-repeat;
       right: -8em;
+
+      @include respond-below(1280px) {
+        display: none;
+      }
     }
   }
 

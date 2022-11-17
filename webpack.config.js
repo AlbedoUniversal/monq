@@ -18,20 +18,10 @@ const devMode = process.env.NODE_ENV !== 'production';
 const putFilesToDist = (folder) =>
   devMode ? `${folder}/[name][ext]` : `${folder}/[name].[contenthash][ext]`;
 
-const pages = ['index', 'header', 'footer', 'monitoring', 'umbrellaMonitoring', 'result'];
-
-const htmlPages = pages.map((page) => {
-  return new HtmlWebpackPlugin({
-    template: `${PATHS.src}/html/${page}.ejs`,
-    filename: `${page}.html`, // dev ? `${page}.html` : html/`${page}.html`
-    favicon: `${PATHS.src}/assets/icons/logo.svg`,
-  });
-});
-
 const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
-    filename: 'styles/[name].[contenthash].css',
+    filename: '[name].[contenthash].css',
     chunkFilename: '[name].css',
   }),
   new HtmlWebpackPlugin({
@@ -39,8 +29,6 @@ const plugins = [
     filename: './index.html', // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
     favicon: `${PATHS.src}/assets/icons/logo.svg`,
   }),
-
-  ...htmlPages,
 ];
 
 if (devMode) {
@@ -64,7 +52,7 @@ module.exports = {
   output: {
     filename: 'js/[name].[contenthash].js',
     path: PATHS.dist,
-    publicPath: '/', // devMode ? '/' : './',
+    publicPath: './', // devMode ? '/' : './',
     // assetModuleFilename: 'src/[name][ext][query]'
   },
   stats: { children: true },
