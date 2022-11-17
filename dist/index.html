@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+	<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Intime</title>
+	<link rel="icon" href="./logo.svg"><script defer src="./js/vendors.7412b78e57ab77c1dab9.js"></script><script defer src="./js/index.f326e4dd68d8428d3084.js"></script><script defer src="./js/shared.98802b70e5f797a3c6fa.js"></script><link href="./styles.d636b8cce715a6c9ce08.css" rel="stylesheet"></head>
+	<body>
+		<div id="main">
+			<!------ HEADER START ------>
+
+				<header class="header">
+  <nav class="header__nav">
+    <a class="header__phone" href="tel:+74959676657">+7 (495) 967 66 57</a>
+    <div class="header__inner">
+      <img class="header__logo" src="./icons/lanit_logo.svg" alt="логотип ланит" />
+      <div class="header__right-side">
+        <a class="header__phone--near-menu" href="tel:+74959676657">+7 (495) 967 66 57</a>
+        <div class="header__menu-burger" id="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<ul class="header__menu">
+  <li class="header__menu-item">
+    <a href="#">Ваши риски ИТ</a>
+    <hr class="header__menu-divider" />
+  </li>
+  <li class="header__menu-item">
+    <a href="#">Почему MONQ</a>
+    <hr class="header__menu-divider" />
+  </li>
+  <li class="header__menu-item">
+    <a href="#">Как правильно внедрить систему</a>
+    <hr class="header__menu-divider" />
+  </li>
+  <li class="header__menu-item">
+    <a href="#">Результаты внедрения MONQ</a>
+    <hr class="header__menu-divider" />
+  </li>
+  <li class="header__menu-item">
+    <a href="#">Оставить заявку</a>
+  </li>
+</ul>
+
+
+				<section class="umbrellaMonitoring">
+  <div class="umbrellaMonitoring__text">
+    <p class="umbrellaMonitoring__title">
+      управляйте качеством ИТ&nbsp;-&nbsp;СЕРВИСОВ С&nbsp;ПОМОЩЬЮ
+      <span class="umbrellaMonitoring__title--blue">ЗОНТИЧНОГО МОНИТОРИНГА</span>
+    </p>
+    <p class="umbrellaMonitoring__sub-title">
+      Комплексное технологическое решение для всех, кто несёт ответственность за&nbsp;ИТ
+    </p>
+  </div>
+  <button class="umbrellaMonitoring__more">Узнать больше</button>
+  <ul class="umbrellaMonitoring__advantages-list">
+    <li class="umbrellaMonitoring__advantages-item">
+      Удовлетворённость внутренних и внешних пользователей
+      <hr class="umbrellaMonitoring__advantages-divider" />
+    </li>
+    <li class="umbrellaMonitoring__advantages-item">
+      Оптимизация затрат на обслуживание ИТ-инфраструктуры
+      <hr class="umbrellaMonitoring__advantages-divider" />
+    </li>
+    <li class="umbrellaMonitoring__advantages-item">
+      Снижение рисков за счёт использования полностью отечественного продукта
+      <hr class="umbrellaMonitoring__advantages-divider" />
+    </li>
+    <li class="umbrellaMonitoring__advantages-item">
+      Первые результаты внедрения уже через 4 недели
+      <hr class="umbrellaMonitoring__advantages-divider" />
+    </li>
+  </ul>
+  <div class="umbrellaMonitoring__logo-monq">
+    <p>при поддержке</p>
+    <img src="./icons/logo-monq.svg" alt="логотип monq" />
+  </div>
+</section>
+<div class="modal">
+  <div class="modal__wrapper">
+    <p class="modal__title">Оставьте свои контакты</p>
+    <button class="modal__close-button">
+      <svg
+        width="63"
+        height="63"
+        viewBox="0 0 63 63"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="44.3623"
+          y="12.6183"
+          width="8.92244"
+          height="44.1661"
+          rx="4.46122"
+          transform="rotate(45 44.3623 12.6183)"
+          fill="currentColor"
+        />
+        <rect
+          x="50.356"
+          y="43.8484"
+          width="8.92244"
+          height="44.1661"
+          rx="4.46122"
+          transform="rotate(135 50.356 43.8484)"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <section class="consult" id="get">
+      <div class="consult__container">
+        <form class="consult__form" id="form">
+          <div>
+            <div class="consult__in-half--name">
+              <div class="relative relative--name">
+                <input
+                  aria-label="Имя"
+                  id="name"
+                  class="consult__input consult__input--name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя, фамилия*"
+                  autocomplete="off"
+                  required
+                  minlength="2"
+                />
+                <span class="star">*</span>
+                <p class="consult__invalidText consult__invalidText--name">
+                  Необходимо заполнить поле “Имя, Фамилия”
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <input
+              aria-label="Название организации"
+              class="consult__input"
+              name="organization"
+              type="text"
+              placeholder="Компания*"
+              required
+              minlength="3"
+            />
+            <span class="star">*</span>
+            <p class="consult__invalidText">Необходимо заполнить поле “Компания”</p>
+          </div>
+          <div class="relative">
+            <input
+              class="consult__input"
+              name="phone"
+              data-tel-input
+              type="tel"
+              placeholder="Телефон*"
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              required
+            />
+            <span class="star">*</span>
+
+            <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
+          </div>
+          <div class="relative">
+            <input
+              class="consult__input"
+              name="email"
+              type="email"
+              placeholder="Электронная почта*"
+              required
+            />
+            <span class="star">*</span>
+
+            <p class="consult__invalidText">Необходимо заполнить поле “Электронная почта”</p>
+          </div>
+          <div class="consult__in-half">
+            <button class="consult__button disabled" type="submit">
+              Заказать презентацию решения <br />
+              и спланировать пилот
+            </button>
+            <label class="consult__checkbox-label">
+              <input
+                class="_visuallyhidden checkbox"
+                name="agreement"
+                value="yes"
+                type="checkbox"
+                required
+              />
+              <span class="consult__circle"></span>
+              <a href="/policy.pdf" target="_blank">
+                <span class="consult__label-text">Согласен на обработку персональных данных</span>
+              </a>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+			<!------ HEADER END ------>
+
+			<section class="result">
+  <h1 class="result__title">Результаты <br> наших клиентов</h1>
+  <div class="result__list">
+    <div class="result__item">
+      <h2 class="result__item-title">
+        на <span class="result__item-perсent">84%</span> <br> увеличена удовлетворённость пользователей
+      </h2>
+      <p class="result__item-descr">
+        Сокращение числа жалоб от пользователей за счёт проактивного реагирования и проверок основных бизнес-функций в реальном времени
+      </p>
+    </div>
+    <div class="result__item">
+      <h2 class="result__item-title">
+        на <span class="result__item-perсent">50%</span> <br> сокращен downtime ИТ-сервисов
+      </h2>
+      <p class="result__item-descr">
+        Восстанавлиние работы систем за счёт зонтичного мониторинга и автоматических действий
+      </p>
+    </div>
+    <div class="result__item">
+      <h2 class="result__item-title">
+        на <span class="result__item-perсent">70%</span> <br> сокращено время реакции на события
+      </h2>
+      <p class="result__item-descr">
+        Сокращение среднего времени решения инцидентов (MTTR) за счёт быстрого поиска первопричины и правильного распределения алертов по ИТ-командам
+      </p>
+    </div>
+  </div>
+  <button class="result__button">
+    Получить скидку 30% на пилотный проект до 20 декабря
+  </button>
+</section>
+			<section class="monitoring" id="6">
+				<div class="monitoring__control"></div>
+<div class="monitoring__form">
+  <section class="consult" id="get">
+  <div class="consult__container">
+    
+    <form class="consult__form" id="form">
+      <div>
+        <div class="consult__in-half--name">
+          <div class="relative relative--name">
+            <input
+              aria-label="Имя"
+              id="name"
+              class="consult__input consult__input--name"
+              name="name"
+              type="text"
+              placeholder="Имя, фамилия*"
+              autocomplete="off"
+              required
+              minlength="2"
+            />
+            <span class="star">*</span>
+            <p class="consult__invalidText consult__invalidText--name">
+              Необходимо заполнить поле “Имя, Фамилия”
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="relative">
+        <input
+          aria-label="Название организации"
+          class="consult__input"
+          name="organization"
+          type="text"
+          placeholder="Компания*"
+          required
+          minlength="3"
+        />
+        <span class="star">*</span>
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Компания”
+        </p>
+      </div>
+      <div class="relative">
+        <input
+          class="consult__input"
+          name="phone"
+          data-tel-input
+          type="tel"
+          placeholder="Телефон*"
+          pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+          required
+        />
+        <span class="star">*</span>
+
+        <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
+      </div>
+      <div class="relative">
+        <input
+          class="consult__input"
+          name="email"
+          type="email"
+          placeholder="Электронная почта*"
+          required
+        />
+        <span class="star">*</span>
+
+        <p class="consult__invalidText">
+          Необходимо заполнить поле “Электронная почта”
+        </p>
+      </div>
+      <div class="consult__in-half">
+        <button class="consult__button disabled" type="submit">
+          Заказать презентацию решения <br> и спланировать пилот
+        </button>
+        <label class="consult__checkbox-label">
+          <input
+            class="_visuallyhidden checkbox"
+            name="agreement"
+            value="yes"
+            type="checkbox"
+            required
+          />
+          <span class="consult__circle"></span>
+          <a href="/policy.pdf" target="_blank">
+            <span class="consult__label-text"
+              >Согласен на обработку персональных данных</span
+            >
+          </a>
+        </label>
+      </div>
+    </form>
+  </div>
+</section>
+
+</div>
+			</section>
+		<!------ FOOTER START ------>
+		<footer class="footer">
+			<div class="footer__container">
+  <div class="footer__links">
+    <ul class="footer__adress">
+      <li class="footer__adress-link">2022, ООО «ЛАНИТ-Интеграция»</li>
+      <li class="footer__adress-link">129075, г. Москва, <br> Мурманский проезд, д.14, кор.1</li>
+    </ul>
+    <ul class="footer__contacts">
+      <li class="footer__contacts-link">
+        <img src="./icons/cell-icon.svg" alt="number icon" class="footer__contacts-img">
+        <a href="tel:+74959676657" class="footer__contacts-number">+7 (495) 967 66 57</a>
+      </li>
+      <li class="footer__contacts-link">
+        <img src="./icons/mail-icon.svg" alt="mail icon" class="footer__contacts-img">
+        <a href="mailto:marketing_it@lanit.ru" class="footer__contacts-mail">marketing_it@lanit.ru</a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__logo">
+    <a href="/" class="footer__logo-link">
+      <img src="./icons/lanit_logo.svg" alt="logo" class="footer__logo-img">
+    </a>
+  </div>
+</div>
+		</footer>
+		<!------ FOOTER END ------>
+		<script src="./c63b5e5019cdc4ffe502.js"></script>
+	</body>
+</html>
