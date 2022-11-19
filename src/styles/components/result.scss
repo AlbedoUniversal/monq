@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 22%;
-  min-height: 750px;
 
   @media (min-width: 1000px) {
     background-image: url(../assets/images/result-bg-max.png);
@@ -31,8 +30,24 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
+
+
+
+    @include respond-above(1280px) {
+      min-height: 350px;
+
+    }
+
+    @include respond-above(1920px) {
+      min-height: 470px;
+
+    }
+
+    @include respond-above(2560px) {
+      min-height: 650px;
+    }
 
     @media (min-width: 1000px) {
       flex-direction: row;
@@ -57,18 +72,31 @@
     flex-direction: column;
     gap: 10px;
     flex: 1;
-    max-width: 310px;
+    max-width: 16em;
 
-
-
-    @media (max-width: 1000px) {
-      max-width: 350px;
+    @media (max-width: 1920px) {
+      max-width: 11em;
     }
-  }
 
-  &__item-line {
-    background-color: red;
-    height: 0.3em;
+    @media (max-width: 1200px) {
+      max-width: 16em;
+    }
+
+    &:nth-child(2) {
+      top: 110px;
+
+      @media (max-width: 1000px) {
+        top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 40px;
+
+      @media (max-width: 1000px) {
+        top: 0;
+      }
+    }
   }
 
 
@@ -77,6 +105,18 @@
     height: 100%;
     left: -40px;
     bottom: -45px;
+
+    @include respond-above(1280px) {
+      bottom: -35px;
+
+    }
+
+    @include respond-above(1920px) {
+      bottom: -45px;
+
+    }
+
+    @include respond-above(2560px) {}
 
     @media (max-width: 1000px) {
       display: none;
@@ -106,20 +146,20 @@
     background-color: $c-button;
     text-transform: uppercase;
     @include resultButton($c-white, 700);
-    border-radius: 80px;
+    border-radius: 60px;
     border: none;
     outline: none;
     cursor: pointer;
-    width: fluid(330, 500);
-    padding: clamp(1.25rem, 0.469vw, 2.5rem);
+    padding: 1em;
     font-family: "Gilroy";
     color: $c-white;
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
-    margin: 60px 0;
+    margin: 70px 170px 90px 0;
     align-self: end;
 
     @media (max-width: 1000px) {
       align-self: center;
+      margin: 60px 0;
     }
   }
 }

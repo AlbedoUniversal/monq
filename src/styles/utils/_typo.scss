@@ -275,13 +275,13 @@
   font-size: $fs-20;
 
   @include respond-above(375px) {
-    font-size: $fs-25;
-    line-height: 25px;
+    font-size: $fs-20;
+    line-height: 20px;
   }
 
   @include respond-above(720px) {
-    font-size: $fs-35;
-    line-height: 35px;
+    font-size: $fs-30;
+    line-height: 30px;
   }
 
   @include respond-above(1280px) {
@@ -297,6 +297,40 @@
   @include respond-above(2560px) {
     font-size: $fs-45;
     line-height: 45px;
+  }
+}
+
+@mixin formButton($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 700);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(375px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 23px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
   }
 }
 
