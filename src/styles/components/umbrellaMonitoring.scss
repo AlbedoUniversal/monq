@@ -26,7 +26,11 @@
     text-transform: uppercase;
     @include headingText($c-black, 900);
     @include respond-above(1280px) {
-      max-width: 70%;
+      max-width: 60%;
+    }
+
+    @include respond-above(1920px) {
+      max-width: 80%;
     }
 
     &--blue {
@@ -42,6 +46,10 @@
 
     @include respond-above(1280px) {
       max-width: 33%;
+    }
+
+    @include respond-above(1920px) {
+      max-width: 60%;
     }
   }
 

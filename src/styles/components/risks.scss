@@ -1,0 +1,164 @@
+.risks {
+  background-image: url('../assets/images/bg-risk.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-above(1280px) {
+    background-image: url('../assets/images/bg-risk-desktop.jpg');
+  }
+
+  @include container();
+
+  &__mobile {
+    @include respond-above(1280px) {
+      display: none;
+    }
+  }
+
+  &__desctop {
+    @include respond-below(1279px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    padding-top: 1.4em;
+    padding-bottom: 0.9em;
+    font-family: 'HelveticaNeueCyr-Bold';
+    text-align: center;
+    @include text7(900);
+    @include respond-above(768px) {
+      max-width: 70%;
+    }
+
+    &--blue {
+      color: $c-blue;
+    }
+  }
+
+  &__list-title {
+    background-color: $c-blue;
+    border: none;
+    border-radius: 60px;
+    padding: 0.8em 1em;
+    width: 15em;
+    text-align: center;
+    @include text8($c-white);
+
+    @include respond-above(768px) {
+      width: 22em;
+      padding: 0.8em 4em;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.8em;
+    @include text8();
+  }
+
+  &__item-text {
+    @include respond-above(768px) {
+      max-width: 60%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 0;
+    max-width: 33em;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__more {
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    @include text4($c-white);
+    padding: 0.7em 5em;
+    background-color: $c-accentOrange;
+    border-radius: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 2em 0;
+  }
+
+  &__radio-btns {
+    display: flex;
+    border: none;
+    gap: 1em;
+  }
+
+  &__radio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $radioBtn;
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    border-radius: 60px;
+    padding: 0.8em 2em 0.8em 2em;
+    width: 20em;
+    cursor: pointer;
+
+    @include text8($c-black);
+
+    & input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &--active {
+      background-color: $c-blue;
+      color: $c-white;
+    }
+  }
+
+  &__radio-label {
+    max-width: 12em;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid $radioBtnCheckBox;
+    border-radius: 50%;
+    position: relative;
+
+    &--active {
+      border-color: $c-white;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 1em;
+        height: 1em;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 22.8%;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+  }
+}

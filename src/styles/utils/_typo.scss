@@ -163,6 +163,59 @@
     font-size: $fs-35;
   }
 }
+@mixin text7($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+  }
+}
+
+@mixin text8($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
 
 @mixin resultTitle($args...) {
   $color: argsColorHandler($args);
@@ -376,10 +429,10 @@
     $fw: list.nth($args, 2);
   }
 
-  @if (list.length($args)==1) {
+  @if (list.length($args) ==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first)=='number') {
+    @if (meta.type-of($first) == 'number') {
       $fw: $first;
     }
   }
@@ -398,10 +451,10 @@
     $color: list.nth($args, 1);
   }
 
-  @if (list.length($args)==1) {
+  @if (list.length($args) ==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first) !='number') {
+    @if (meta.type-of($first) != 'number') {
       $color: $first;
     }
   }

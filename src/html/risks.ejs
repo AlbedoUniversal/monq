@@ -1,56 +1,92 @@
 <section class="risks">
-  <h2><span>Риски ИТ,</span> с которыми вы сталкиваетесь каждый день</h2>
-  <div>
-    <button>Директор по развитию цифрового бизнеса</button>
-    <div>
-      <div>
-        <img src="" alt="" />
-        <p>Упущенная прибыль из-за простоя сервисов</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Снижение лояльности клиентов</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Низкая эффективность инвестиций в ИТ</p>
-      </div>
-    </div>
-  </div>
-  <div>
-    <button>Руководитель ИТ</button>
-    <div>
-      <div>
-        <img src="" alt="" />
-        <p>Регулярные срывы SLA перед бизнесом</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Выгорание ИТ-команды из-за перекладывания ответственности за инциденты</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Низкая эффективность инвестиций в ИТ</p>
+  <h2 class="risks__title">
+    <span class="risks__title--blue">Риски ИТ,</span> с которыми вы сталкиваетесь каждый день
+  </h2>
+  <div class="risks__mobile">
+    <div class="risks__list">
+      <h3 class="risks__list-title">Директор по развитию цифрового бизнеса</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="../assets/icons/dollar.svg" alt="" />
+          <p class="risks__item-text">Упущенная прибыль из-за простоя сервисов</p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/bag.svg" alt="" />
+          <p class="risks__item-text">Снижение лояльности клиентов</p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/photo.svg" alt="" />
+          <p class="risks__item-text">Низкая эффективность инвестиций в ИТ</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <button>ИТ-специалист</button>
-    <div>
-      <div>
-        <img src="" alt="" />
-        <p>Сотни алертов в час, рутинные задачи, ручной поиск причины сбоя</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Дублирование и разрозненность данных об ИТ</p>
-      </div>
-      <div>
-        <img src="" alt="" />
-        <p>Неудобство существующих решений</p>
-      </div>
-    </div>
-  </div>
 
-  <button>Начать управлять своими ИТ-рисками</button>
+    <div class="risks__list">
+      <h3 class="risks__list-title">Руководитель ИТ</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="../assets/icons/arrow2.svg" alt="" />
+          <p class="risks__item-text">Регулярные срывы SLA перед бизнесом</p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/banned.svg" alt="" />
+          <p class="risks__item-text">
+            Нет объективных данных для оценки доступности ИТ-сервисов и понимания «узких мест»
+            инфраструктуры
+          </p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/burnout.svg" alt="" />
+          <p class="risks__item-text">
+            Выгорание ИТ-команды из-за перекладывания ответственности за инциденты
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="risks__list">
+      <h3 class="risks__list-title">ИТ-специалист</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="../assets/icons/allert.svg" alt="" />
+          <p class="risks__item-text">
+            Сотни алертов в час, рутинные задачи, ручной поиск причины сбоя
+          </p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/duble.svg" alt="" />
+          <p class="risks__item-text">Дублирование и разрозненность данных об ИТ</p>
+        </div>
+        <div class="risks__item">
+          <img src="../assets/icons/stack.svg" alt="" />
+          <p class="risks__item-text">Неудобство существующих решений</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="risks__desctop">
+    <fieldset class="risks__radio-btns">
+      <button class="risks__radio-btn">
+        <label class="risks__radio-label" for="boss">Директор по развитию цифрового бизнеса</label>
+        <span class="risks__checkbox"></span>
+      </button>
+
+      <button class="risks__radio-btn">
+        <label class="risks__radio-label" for="it-boss">Руководитель ИТ</label>
+        <input type="radio" id="it-boss" name="radio-btns" value="it-boss" />
+        <span class="risks__checkbox"></span>
+      </button>
+
+      <button class="risks__radio-btn">
+        <label class="risks__radio-label" for="it-spec">ИТ-специалист</label>
+        <input type="radio" id="it-spec" name="radio-btns" value="it-spec" />
+        <span class="risks__checkbox"></span>
+      </button>
+    </fieldset>
+    <div>
+      <img src="#" alt="" />
+      <div></div>
+    </div>
+  </div>
+  <button class="risks__more openModalBtn">Начать управлять своими ИТ-рисками</button>
 </section>
