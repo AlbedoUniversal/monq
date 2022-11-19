@@ -12,6 +12,10 @@ const openModal = document.querySelector('.umbrellaMonitoring__more');
 const modal = document.querySelector('.modal');
 const closeModal = modal.querySelector('.modal__close-button');
 
+const openResultModal = document.querySelector('.result__button');
+const resultModal = document.querySelector('.resultModal');
+const closeResultModal = resultModal.querySelector('.resultModal__close-button');
+
 phoneInput();
 postForm();
 
@@ -30,3 +34,15 @@ closeModal.addEventListener('click', () => {
   document.body.classList.remove('modal__non-scroll');
   modal.classList.remove('modal--active');
 });
+
+openResultModal.addEventListener('click', () => {
+  document.body.classList.add('resultModal__non-scroll');
+  resultModal.classList.add('resultModal--active');
+});
+
+closeResultModal.addEventListener('click', () => {
+  document.body.classList.remove('resultModal__non-scroll');
+  resultModal.classList.remove('resultModal--active');
+});
+
+

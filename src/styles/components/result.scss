@@ -11,6 +11,7 @@
   @media (min-width: 1000px) {
     background-image: url(../assets/images/result-bg-max.png);
     background-position: bottom;
+    background-size: contain;
   }
 
 
@@ -29,16 +30,41 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+
+
+
+    @include respond-above(1280px) {
+      min-height: 350px;
+
+    }
+
+    @include respond-above(1920px) {
+      min-height: 470px;
+
+    }
+
+    @include respond-above(2560px) {
+      min-height: 650px;
+    }
 
     @media (min-width: 1000px) {
       flex-direction: row;
       margin: 0 50px;
     }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      margin: 0 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
   }
 
   &__item {
+    position: relative;
     color: $c-white;
     font-family: 'HelveticaNeueCyr-Black';
     font-style: normal;
@@ -46,24 +72,55 @@
     flex-direction: column;
     gap: 10px;
     flex: 1;
-    min-height: 450px;
+    max-width: 16em;
 
-    &::before {
-      content: url('../assets/images/result-circle.png');
-      position: relative;
-      right: 50px;
-      top: 75px;
-
+    @media (max-width: 1920px) {
+      max-width: 11em;
     }
 
-    @media (max-width: 1000px) {
-      max-width: 350px;
+    @media (max-width: 1200px) {
+      max-width: 16em;
+    }
+
+    &:nth-child(2) {
+      top: 110px;
+
+      @media (max-width: 1000px) {
+        top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 40px;
+
+      @media (max-width: 1000px) {
+        top: 0;
+      }
     }
   }
 
-  &__item-line {
-    background-color: red;
-    height: 0.3em;
+
+  &__item-svg {
+    position: absolute;
+    height: 100%;
+    left: -40px;
+    bottom: -45px;
+
+    @include respond-above(1280px) {
+      bottom: -35px;
+
+    }
+
+    @include respond-above(1920px) {
+      bottom: -45px;
+
+    }
+
+    @include respond-above(2560px) {}
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
 
@@ -81,23 +138,28 @@
   }
 
   &__item-perсent {
-    font-size: fluid(40, 90);
+    @include resultPercent($c-white, 900)
   }
 
   &__button {
     display: inline-block;
     background-color: $c-button;
     text-transform: uppercase;
-    border-radius: 80px;
+    @include resultButton($c-white, 700);
+    border-radius: 60px;
     border: none;
     outline: none;
     cursor: pointer;
-    width: fluid(330, 500);
-    padding: clamp(1.25rem, 0.469vw, 2.5rem);
+    padding: 1em;
     font-family: "Gilroy";
     color: $c-white;
-    font-size: fluid(15, 30);
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
-    margin: 60px 0;
+    margin: 70px 170px 90px 0;
+    align-self: end;
+
+    @media (max-width: 1000px) {
+      align-self: center;
+      margin: 60px 0;
+    }
   }
 }

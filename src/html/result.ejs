@@ -2,7 +2,16 @@
   <h1 class="result__title">Результаты <br> наших клиентов</h1>
   <div class="result__list">
     <div class="result__item">
-      <hr class="result__item-line">
+      <svg class="result__item-svg" width="35" height="997" viewBox="0 0 35 997" fill="none" >
+        <rect x="0.966797" y="0.803955" width="33.4684" height="33.4684" rx="16.7342" fill="white"/>
+        <rect x="15.6934" y="996.824" width="973.262" height="4.01624" rx="2.00812" transform="rotate(-90 15.6934 996.824)" fill="url(#paint0_linear_1_2973)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2973" x1="348.008" y1="999.502" x2="27.1525" y2="999.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+      </svg>
       <h2 class="result__item-title">
         на <span class="result__item-perсent">84%</span> <br> увеличена удовлетворённость пользователей
       </h2>
@@ -11,7 +20,16 @@
       </p>
     </div>
     <div class="result__item">
-      <hr class="result__item-line">
+      <svg class="result__item-svg" width="35" height="997" viewBox="0 0 35 997" fill="none" >
+        <rect x="0.966797" y="0.803955" width="33.4684" height="33.4684" rx="16.7342" fill="white"/>
+        <rect x="15.6934" y="996.824" width="973.262" height="4.01624" rx="2.00812" transform="rotate(-90 15.6934 996.824)" fill="url(#paint0_linear_1_2973)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2973" x1="348.008" y1="999.502" x2="27.1525" y2="999.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+      </svg>
       <h2 class="result__item-title">
         на <span class="result__item-perсent">50%</span> <br> сокращен downtime ИТ-сервисов
       </h2>
@@ -20,7 +38,16 @@
       </p>
     </div>
     <div class="result__item">
-      <hr class="result__item-line">
+      <svg class="result__item-svg" width="35" height="997" viewBox="0 0 35 997" fill="none" >
+        <rect x="0.966797" y="0.803955" width="33.4684" height="33.4684" rx="16.7342" fill="white"/>
+        <rect x="15.6934" y="996.824" width="973.262" height="4.01624" rx="2.00812" transform="rotate(-90 15.6934 996.824)" fill="url(#paint0_linear_1_2973)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2973" x1="348.008" y1="999.502" x2="27.1525" y2="999.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+      </svg>
       <h2 class="result__item-title">
         на <span class="result__item-perсent">70%</span> <br> сокращено время реакции на события
       </h2>
@@ -30,6 +57,124 @@
     </div>
   </div>
   <button class="result__button">
-    Получить скидку 30% на пилотный проект до 20 декабря
+    Получить скидку 30% <br> на пилотный проект <br> до 20 декабря
   </button>
 </section>
+<div class="resultModal">
+  <div class="resultModal__wrapper">
+    <p class="resultModal__title">Получить скидку 30% <br> на пилотный проект <br> до 20 декабря</p>
+    <button class="resultModal__close-button">
+      <svg
+        width="63"
+        height="63"
+        viewBox="0 0 63 63"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="44.3623"
+          y="12.6183"
+          width="8.92244"
+          height="44.1661"
+          rx="4.46122"
+          transform="rotate(45 44.3623 12.6183)"
+          fill="currentColor"
+        />
+        <rect
+          x="50.356"
+          y="43.8484"
+          width="8.92244"
+          height="44.1661"
+          rx="4.46122"
+          transform="rotate(135 50.356 43.8484)"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <section class="consult" id="get">
+      <div class="consult__container">
+        <form class="consult__form" id="form">
+          <div>
+            <div class="consult__in-half--name">
+              <div class="relative relative--name">
+                <input
+                  aria-label="Имя"
+                  id="name"
+                  class="consult__input consult__input--name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя, фамилия*"
+                  autocomplete="off"
+                  required
+                  minlength="2"
+                />
+                <span class="star">*</span>
+                <p class="consult__invalidText consult__invalidText--name">
+                  Необходимо заполнить поле “Имя, Фамилия”
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <input
+              aria-label="Название организации"
+              class="consult__input"
+              name="organization"
+              type="text"
+              placeholder="Компания*"
+              required
+              minlength="3"
+            />
+            <span class="star">*</span>
+            <p class="consult__invalidText">Необходимо заполнить поле “Компания”</p>
+          </div>
+          <div class="relative">
+            <input
+              class="consult__input"
+              name="phone"
+              data-tel-input
+              type="tel"
+              placeholder="Телефон*"
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              required
+            />
+            <span class="star">*</span>
+
+            <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
+          </div>
+          <div class="relative">
+            <input
+              class="consult__input"
+              name="email"
+              type="email"
+              placeholder="Электронная почта*"
+              required
+            />
+            <span class="star">*</span>
+
+            <p class="consult__invalidText">Необходимо заполнить поле “Электронная почта”</p>
+          </div>
+          <div class="consult__in-half">
+            <label class="consult__checkbox-label">
+              <input
+                class="_visuallyhidden checkbox"
+                name="agreement"
+                value="yes"
+                type="checkbox"
+                required
+              />
+              <span class="consult__circle"></span>
+              <a href="/policy.pdf" target="_blank">
+                <span class="consult__label-text">Согласен на обработку персональных данных</span>
+              </a>
+            </label>
+            <button class="consult__button disabled" type="submit">
+              Заказать презентацию решения <br />
+              и спланировать пилот
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

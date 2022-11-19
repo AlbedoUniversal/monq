@@ -6,7 +6,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 37px;
+    gap: 30px;
     width: fluid(300, 750);
 
     @media (min-width: 1100px) {
@@ -19,7 +19,7 @@
   }
 
   &__invalidText {
-    margin-top: 8px;
+    margin-top: 4px;
     padding-left: 20px;
     flex-basis: 100%;
     position: absolute;
@@ -39,11 +39,13 @@
     outline: none;
     cursor: pointer;
     width: 100%;
-    padding: clamp(1.25rem, 0.469vw, 2.5rem);
+    // padding: clamp(1.25rem, 0.469vw, 2.5rem);
+    padding: 1em;
     font-family: 'Gilroy';
     color: $c-white;
-    font-size: fluid(15, 30);
+    @include formButton(700, $c-white);
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+    margin-top: .5em;
   }
 
   // .disabled {
@@ -76,7 +78,7 @@
   }
 
   &__label-text {
-    font-size: fluid(14, 25);
+    font-size: fluid(11, 25);
     color: #a0a0a0;
     text-decoration: underline;
     font-family: 'Gilroy';
@@ -97,7 +99,7 @@
   border: 2px solid $c-black;
   border-radius: 80px;
   outline: none;
-  padding: clamp(1.25rem, 1.01rem + 0.262vw, 2.813rem);
+  padding: 1em;
   color: $c-black;
   font-size: fluid(12, 30);
   font-family: Gilroy;
