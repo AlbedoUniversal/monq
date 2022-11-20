@@ -163,6 +163,7 @@
     font-size: $fs-35;
   }
 }
+
 @mixin text7($args...) {
   $color: argsColorHandler($args);
   $fw: argsFwHandler($args, 500);
@@ -213,6 +214,35 @@
 
   @include respond-above(2560px) {
     font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
+@mixin text9($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-13;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-25;
     line-height: 30px;
   }
 }

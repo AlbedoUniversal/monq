@@ -41,6 +41,7 @@ for (let i = 0; i < allRadioBtn.length; i++) {
   const radioBtn = allRadioBtn[i];
   const checkbox = allRadioCheckbox[i];
   const slide = allSliders[i];
+
   radioBtn.addEventListener('click', () => {
     deleteActiveClassFromAll(allRadioBtn, 'risks__radio-btn--active');
     deleteActiveClassFromAll(allRadioCheckbox, 'risks__checkbox--active');

@@ -1,0 +1,187 @@
+.whyMonq {
+  @include container;
+  background-color: $c-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    color: $c-white;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  &__subtitle {
+    max-width: 26em;
+
+    @include respond-above(1280px) {
+      max-width: 100%;
+    }
+  }
+
+  &__content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: $c-black;
+    margin-left: 10em;
+
+    @include respond-below(600px) {
+      margin: 0;
+      align-items: center;
+    }
+  }
+
+  &__content-item {
+    background-color: $c-white;
+    border-radius: 40px;
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+    @include text9();
+
+    @include respond-below(600px) {
+      max-width: 13em;
+    }
+    @include respond-above(1280px) {
+      width: 19.6em;
+      padding: 1em 3em;
+    }
+
+    & span {
+      content: '';
+      width: 5em;
+      height: 0.2em;
+      position: absolute;
+      background-color: $c-white;
+      top: 50%;
+      left: -5em;
+      z-index: -1;
+      transform: translateY(-50%);
+
+      @include respond-below(600px) {
+        left: -2em;
+        width: 2em;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background-color: $c-white;
+        width: 1.8em;
+        height: 1.8em;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:nth-child(odd) {
+      & span {
+        width: 20vw;
+        left: -7em;
+
+        &::before {
+          width: 1.4em;
+          height: 1.4em;
+        }
+
+        @include respond-below(600px) {
+          left: -2em;
+          width: 2em;
+        }
+      }
+    }
+  }
+
+  &__item-text {
+    max-width: 16em;
+  }
+
+  &__mobile {
+    display: flex;
+
+    @include respond-below(600px) {
+      justify-content: center;
+    }
+
+    @include respond-above(1280px) {
+      display: none;
+    }
+
+    & img {
+      margin: -9%;
+      height: 50em;
+
+      @include respond-below(600px) {
+        display: none;
+      }
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    gap: 3em;
+    @include respond-below(1279px) {
+      display: none;
+    }
+
+    & img {
+      height: 18em;
+
+      @include respond-above(1620px) {
+        height: 30em;
+      }
+    }
+  }
+
+  &__desktop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+    width: 100%;
+
+    &--left {
+      .whyMonq__content-item {
+        position: relative;
+
+        &:nth-child(2) {
+          align-self: end;
+        }
+      }
+    }
+
+    &--right {
+      .whyMonq__content-item {
+        position: relative;
+
+        &:nth-child(odd) {
+          align-self: end;
+        }
+      }
+    }
+  }
+
+  &__more {
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    @include text4($c-white);
+    padding: 0.7em 5em;
+    background-color: $c-accentOrange;
+    border-radius: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 4em 0;
+
+    @include respond-above(1280px) {
+      align-self: center;
+    }
+  }
+}
