@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Intime</title>
-	<link rel="icon" href="/logo.svg"><script defer src="/js/vendors.7412b78e57ab77c1dab9.js"></script><script defer src="/js/index.9e9d2591b0ebaa7299ee.js"></script><script defer src="/js/shared.ef41920856a61118c465.js"></script><link href="/styles.a2e1965194844efcf383.css" rel="stylesheet"></head>
+	<link rel="icon" href="/logo.svg"><script defer src="/js/vendors.7412b78e57ab77c1dab9.js"></script><script defer src="/js/index.2028aa16f14cc168d374.js"></script><script defer src="/js/shared.af326296d3a47fddd971.js"></script><link href="/styles.12e1a2762d8329f916ac.css" rel="stylesheet"></head>
 	<body>
 		<div id="main">
 			<!------ HEADER START ------>
@@ -59,7 +59,7 @@
       Комплексное технологическое решение для всех, кто несёт ответственность за&nbsp;ИТ
     </p>
   </div>
-  <button class="umbrellaMonitoring__more">Узнать больше</button>
+  <button class="umbrellaMonitoring__more openModalBtn">Узнать больше</button>
   <ul class="umbrellaMonitoring__advantages-list">
     <li class="umbrellaMonitoring__advantages-item">
       Удовлетворённость внутренних и внешних пользователей
@@ -178,10 +178,6 @@
             <p class="consult__invalidText">Необходимо заполнить поле “Электронная почта”</p>
           </div>
           <div class="consult__in-half">
-            <button class="consult__button disabled" type="submit">
-              Заказать презентацию решения <br />
-              и спланировать пилот
-            </button>
             <label class="consult__checkbox-label">
               <input
                 class="_visuallyhidden checkbox"
@@ -195,6 +191,10 @@
                 <span class="consult__label-text">Согласен на обработку персональных данных</span>
               </a>
             </label>
+            <button class="consult__button disabled" type="submit">
+              Заказать презентацию решения <br />
+              и спланировать пилот
+            </button>
           </div>
         </form>
       </div>
@@ -202,8 +202,196 @@
   </div>
 </div>
 
+				<section class="risks">
+  <h2 class="risks__title">
+    <span class="risks__title--blue">Риски ИТ,</span> с которыми вы сталкиваетесь каждый день
+  </h2>
+  <div class="risks__mobile">
+    <div class="risks__list">
+      <h3 class="risks__list-title">Директор по развитию цифрового бизнеса</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="/icons/dollar.svg" alt="" />
+          <p class="risks__item-text">Упущенная прибыль из-за простоя сервисов</p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/bag.svg" alt="" />
+          <p class="risks__item-text">Снижение лояльности клиентов</p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/photo.svg" alt="" />
+          <p class="risks__item-text">Низкая эффективность инвестиций в ИТ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="risks__list">
+      <h3 class="risks__list-title">Руководитель ИТ</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="/icons/arrow2.svg" alt="" />
+          <p class="risks__item-text">Регулярные срывы SLA перед бизнесом</p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/banned.svg" alt="" />
+          <p class="risks__item-text">
+            Нет объективных данных для оценки доступности ИТ-сервисов и понимания «узких мест»
+            инфраструктуры
+          </p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/burnout.svg" alt="" />
+          <p class="risks__item-text">
+            Выгорание ИТ-команды из-за перекладывания ответственности за инциденты
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="risks__list">
+      <h3 class="risks__list-title">ИТ-специалист</h3>
+      <div class="risks__inner">
+        <div class="risks__item">
+          <img src="/icons/allert.svg" alt="" />
+          <p class="risks__item-text">
+            Сотни алертов в час, рутинные задачи, ручной поиск причины сбоя
+          </p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/duble.svg" alt="" />
+          <p class="risks__item-text">Дублирование и разрозненность данных об ИТ</p>
+        </div>
+        <div class="risks__item">
+          <img src="/icons/stack.svg" alt="" />
+          <p class="risks__item-text">Неудобство существующих решений</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="risks__desctop">
+    <fieldset class="risks__radio-btns">
+      <button class="risks__radio-btn risks__radio-btn--active">
+        <label class="risks__radio-label" for="boss">Директор по развитию цифрового бизнеса</label>
+        <span class="risks__checkbox risks__checkbox--active"></span>
+      </button>
+
+      <button class="risks__radio-btn">
+        <label class="risks__radio-label" for="it-boss">Руководитель ИТ</label>
+        <input type="radio" id="it-boss" name="radio-btns" value="it-boss" />
+        <span class="risks__checkbox"></span>
+      </button>
+
+      <button class="risks__radio-btn">
+        <label class="risks__radio-label" for="it-spec">ИТ-специалист</label>
+        <input type="radio" id="it-spec" name="radio-btns" value="it-spec" />
+        <span class="risks__checkbox"></span>
+      </button>
+    </fieldset>
+
+    <div class="risks__list">
+      <div class="risks__list-wrapper">
+        <div class="risks__slide risks__slide--active">
+          <img src="/images/circles.png" alt="" />
+          <div class="risks__text-list">
+            <div class="risks__text-list-item">
+              <img src="/icons/dollar-white.svg" alt="" />
+              <p class="risks__item-text">Упущенная прибыль из-за простоя сервисов</p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/bag-white.svg" alt="" />
+              <p class="risks__item-text">Снижение лояльности клиентов</p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/photo-white.svg" alt="" />
+              <p class="risks__item-text">Низкая эффективность инвестиций в ИТ</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="risks__slide risks__slide">
+          <img src="/images/grid.png" alt="" />
+          <div class="risks__text-list">
+            <div class="risks__text-list-item">
+              <img src="/icons/allert-white.svg" alt="" />
+              <p class="risks__item-text">Регулярные срывы SLA перед бизнесом</p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/duble-white.svg" alt="" />
+              <p class="risks__item-text">
+                Нет объективных данных для оценки доступности ИТ-сервисов и понимания «узких мест»
+                инфраструктуры
+              </p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/stack-white.svg" alt="" />
+              <p class="risks__item-text">
+                Выгорание ИТ-команды из-за перекладывания ответственности за инциденты
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="risks__slide">
+          <img src="/images/diagonals.png" alt="" />
+          <div class="risks__text-list">
+            <div class="risks__text-list-item">
+              <img src="/icons/dollar-white.svg" alt="" />
+              <p class="risks__item-text">
+                Сотни алертов в час, рутинные задачи, ручной поиск причины сбоя
+              </p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/bag-white.svg" alt="" />
+              <p class="risks__item-text">Дублирование и разрозненность данных об ИТ</p>
+            </div>
+            <div class="risks__text-list-item">
+              <img src="/icons/photo-white.svg" alt="" />
+              <p class="risks__item-text">Неудобство существующих решений</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="risks__more openModalBtn">Начать управлять своими ИТ-рисками</button>
+</section>
+
 
 			<!------ HEADER END ------>
+
+
+			<section class="integration">
+  <h1 class="integration__title">
+    Максимальная отдача <br />
+    при профессиональном внедрении системы
+  </h1>
+  <p class="integration__descr">
+    Компания ЛАНИТ-Интеграция – эксперт в реализации высокотехнологичных
+    проектов. <br />
+    Мы внедряем эффективные ИТ-решения с учётом приоритетов и ресурсов наших
+    клиентов.
+  </p>
+  <div class="integration__circle">
+    <h2 class="integration__circle-title">
+      НАША <br />
+      ЭКСПЕРТИЗА
+    </h2>
+    <ul class="integration__circle-list">
+      <li class="integration__circle-item">
+        Многолетний опыт внедрения решений для мониторинга ИТ различных классов
+      </li>
+      <li class="integration__circle-item">
+        Собственные компетенции по смежным системам (сети, СХД и т.д.)
+      </li>
+      <li class="integration__circle-item">Собственная тестовая лаборатория</li>
+      <li class="integration__circle-item">
+        Специалисты, сертифицированные по ключевым технологиям
+      </li>
+    </ul>
+  </div>
+
+  <button class="integration__button">Получить консультацию</button>
+</section>
 
 			<section class="result">
   <h1 class="result__title">Результаты <br> наших клиентов</h1>
@@ -392,7 +580,7 @@
 <div class="monitoring__form">
   <section class="consult" id="get">
   <div class="consult__container">
-
+    
     <form class="consult__form" id="form">
       <div>
         <div class="consult__in-half--name">
@@ -413,7 +601,7 @@
               Необходимо заполнить поле “Имя, Фамилия”
             </p>
           </div>
-
+          
         </div>
       </div>
       <div class="relative">
@@ -512,6 +700,6 @@
 </div>
 		</footer>
 		<!------ FOOTER END ------>
-		<script src="/8b6ffce41e5233bee44f.js"></script>
+		<script src="/f5e8f990d4ecf04c1558.js"></script>
 	</body>
 </html>
