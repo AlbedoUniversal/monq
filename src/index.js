@@ -19,6 +19,7 @@ const closeResultModal = resultModal.querySelector('.resultModal__close-button')
 
 const allRadioBtn = document.querySelectorAll('.risks__radio-btn');
 const allRadioCheckbox = document.querySelectorAll('.risks__checkbox');
+const allSliders = document.querySelectorAll('.risks__slide');
 
 phoneInput();
 postForm();
@@ -39,12 +40,15 @@ for (let i = 0; i < openModal.length; i++) {
 for (let i = 0; i < allRadioBtn.length; i++) {
   const radioBtn = allRadioBtn[i];
   const checkbox = allRadioCheckbox[i];
+  const slide = allSliders[i];
   radioBtn.addEventListener('click', () => {
     deleteActiveClassFromAll(allRadioBtn, 'risks__radio-btn--active');
     deleteActiveClassFromAll(allRadioCheckbox, 'risks__checkbox--active');
+    deleteActiveClassFromAll(allSliders, 'risks__slide--active');
 
     checkbox.classList.add('risks__checkbox--active');
     radioBtn.classList.add('risks__radio-btn--active');
+    slide.classList.add('risks__slide--active');
   });
 }
 
