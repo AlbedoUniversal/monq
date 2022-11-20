@@ -1,0 +1,32 @@
+.integration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    @include integrationTitle ($c-black);
+    text-align: center;
+    padding: 50px 0;
+
+    &::first-line {
+      color: #2F69FF;
+    }
+  }
+
+  &__descr {
+    @include integrationDescr();
+    padding: 0 40px 50px 40px;
+  }
+
+  &__svg {
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  &__svg-number {
+    &::after:nth-child(1) {
+      content: 'fffff';
+    }
+  }
+}
