@@ -368,6 +368,74 @@
   }
 }
 
+@mixin integrationTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-25;
+
+  @include respond-above(375px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+    line-height: 50px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+    line-height: 40px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+    line-height: 60px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+    line-height: 70px;
+  }
+}
+
+@mixin integrationDescr($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-35;
+    line-height: 35px;
+  }
+}
+
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {
   $fw: $initValue;
