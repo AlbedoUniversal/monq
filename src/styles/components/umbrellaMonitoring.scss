@@ -32,6 +32,7 @@
   &__title {
     font-family: 'HelveticaNeueCyr-Bold';
     text-transform: uppercase;
+    line-height: 1.17;
 
     @include headingText($c-black, 900);
     @include respond-above(1280px) {
