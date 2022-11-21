@@ -39,13 +39,9 @@
 
   &__wrapper {
     background-color: $modalBg;
-    padding: 2em 6em;
+    padding: 2em 2em;
     border-radius: 40px;
     position: relative;
-
-    @include respond-below(720px) {
-      padding: 2em 3em;
-    }
   }
 
   &__close-button {

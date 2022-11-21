@@ -20,7 +20,6 @@
   }
 
   &__desctop {
-    width: 100%;
     @include respond-below(1279px) {
       display: none;
     }
@@ -64,12 +63,9 @@
 
   &__item-text {
     @include text8();
-    @include respond-above(768px) {
-      max-width: 60%;
-    }
 
-    @include respond-above(1280px) {
-      max-width: 100%;
+    @include respond-below(1280px) {
+      max-width: 22em;
     }
   }
 
@@ -100,7 +96,6 @@
   &__slide {
     display: none;
     gap: 3em;
-    width: 100%;
 
     &--active {
       display: flex;
@@ -119,12 +114,13 @@
     background-color: $radioBtn;
     border-radius: 60px;
     width: 100%;
-    padding: 0 1em;
+    padding: 2.4em 1em;
     height: 3.8em;
     align-items: center;
     overflow: hidden;
     position: relative;
     gap: 10em;
+    width: 100%;
 
     &::before {
       content: '';
@@ -165,8 +161,11 @@
   &__radio-btns {
     display: flex;
     border: none;
+    gap: 3em;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     justify-content: space-between;
-    gap: 1em;
   }
 
   &__radio-btn {
