@@ -30,9 +30,11 @@
     padding-bottom: 0.9em;
     font-family: 'HelveticaNeueCyr-Bold';
     text-align: center;
+    text-transform: uppercase;
+    max-width: 15em;
     @include text7(900);
-    @include respond-above(768px) {
-      max-width: 70%;
+    @include respond-above(1280px) {
+      max-width: 80%;
     }
 
     &--blue {
@@ -119,7 +121,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-    gap: 10em;
+    gap: 5.5em;
     width: 100%;
 
     &::before {
@@ -152,6 +154,7 @@
     align-self: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     margin: 4em 0;
+    padding: 1.7em 5.5em;
 
     @include respond-above(1280px) {
       align-self: end;
