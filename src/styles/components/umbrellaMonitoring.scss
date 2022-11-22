@@ -7,11 +7,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20%;
-  @include container();
 
+  @include container();
   @include respond-above(1280px) {
     background-image: url('../assets/images/bg-image-desktop.png');
     background-position: center;
+  }
+
+  @include respond-above(1540px) {
+    background-position: -14em -8em;
+  }
+
+  @include respond-above(1695px) {
+    background-position: -13em -8em;
   }
 
   &__text {
@@ -24,9 +32,11 @@
   &__title {
     font-family: 'HelveticaNeueCyr-Bold';
     text-transform: uppercase;
+    line-height: 1.17;
+
     @include headingText($c-black, 900);
     @include respond-above(1280px) {
-      max-width: 70%;
+      max-width: 16em;
     }
 
     &--blue {
@@ -37,11 +47,7 @@
   &__sub-title {
     @include text3();
     @include respond-above(768px) {
-      max-width: 70%;
-    }
-
-    @include respond-above(1280px) {
-      max-width: 33%;
+      max-width: 21em;
     }
   }
 
@@ -78,6 +84,7 @@
       width: 7em;
       background-repeat: no-repeat;
       right: -8em;
+      top: -2em;
 
       @include respond-below(1280px) {
         display: none;
@@ -96,6 +103,10 @@
 
     @include respond-below(610px) {
       flex-basis: auto;
+    }
+
+    @include respond-between(611px, 1280px) {
+      flex-basis: 33%;
     }
   }
 

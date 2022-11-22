@@ -1,0 +1,171 @@
+.integration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    @include integrationTitle ($c-black);
+    text-align: center;
+    padding: 50px 0;
+
+    &::first-line {
+      color: #2F69FF;
+    }
+  }
+
+  &__descr {
+    @include integrationDescr();
+    padding: 0 40px 50px 40px;
+    text-align: center;
+  }
+
+  &__circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2F69FF;
+    color: $c-white;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include respond-between(350px, 720px) {
+      width: 330px;
+      height: 330px;
+    }
+
+    @include respond-between(720px, 1280px) {
+      width: 520px;
+      height: 520px;
+    }
+
+    @include respond-between(1280px, 1920px) {
+      width: 390px;
+      height: 390px;
+    }
+
+    @include respond-above(2560px) {
+      width: 765px;
+      height: 765px;
+    }
+
+
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 9px;
+      background-color: $c-white;
+      transform: translateY(-50%);
+      top: 55%;
+
+      @include respond-between(350px, 720px) {
+        height: 6px;
+      }
+
+      @include respond-between(720px, 1280px) {
+        height: 6px;
+      }
+
+      @include respond-between(1280px, 1920px) {
+        height: 6px;
+      }
+
+      @include respond-above(2560px) {
+        height: 13px;
+      }
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 9px;
+      background-color: $c-white;
+      transform: translateY(-50%);
+      rotate: 90deg;
+      bottom: 50px;
+      border-radius: 60px;
+
+      @include respond-between(350px, 720px) {
+        height: 6px;
+        bottom: 36px;
+      }
+
+      @include respond-between(720px, 1280px) {
+        height: 6px;
+        bottom: 64px;
+      }
+
+      @include respond-between(1280px, 1920px) {
+        height: 6px;
+        bottom: 34px;
+      }
+
+      @include respond-above(2560px) {
+        height: 13px;
+        bottom: 97px;
+      }
+    }
+  }
+
+  &__circle-title {
+    @include integrationCircleTitle($c-white);
+    text-align: center;
+    padding: 35px 0;
+  }
+
+
+  &__circle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 60px;
+
+    @include respond-between(350px, 720px) {}
+
+    @include respond-between(720px, 1280px) {
+      padding-bottom: 105px;
+      padding-left: 15px;
+    }
+
+    @include respond-between(1280px, 1920px) {
+      padding-bottom: 94px;
+    }
+
+    @include respond-above(2560px) {
+      padding-bottom: 185px;
+    }
+  }
+
+  &__circle-item {
+    flex-basis: 49%;
+    justify-content: center;
+    padding: 18px 23px;
+    @include integrationCircleDescr($c-white);
+
+    @include respond-above(2560px) {
+      padding: 31px 48px
+    }
+
+  }
+
+  &__button {
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    @include text4($c-white);
+    padding: 0.7em 5em;
+    background-color: $c-accentOrange;
+    border-radius: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 4em 0;
+  }
+}
