@@ -50,7 +50,7 @@
     }
     @include respond-above(1280px) {
       width: 19.6em;
-      padding: 1em 3em;
+      padding: 2em 3em;
     }
 
     & span {
@@ -82,7 +82,7 @@
 
     &:nth-child(odd) {
       & span {
-        width: 20vw;
+        width: 17vw;
         left: -7em;
 
         &::before {
@@ -136,6 +136,9 @@
       @include respond-above(1620px) {
         height: 30em;
       }
+      @include respond-above(2000px) {
+        height: 37em;
+      }
     }
   }
 
@@ -145,13 +148,23 @@
     gap: 1em;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 
     &--left {
       .whyMonq__content-item {
         position: relative;
 
+        & span {
+          rotate: 180deg;
+          left: 7em;
+        }
+
         &:nth-child(2) {
-          align-self: end;
+          align-self: flex-end;
+          & span {
+            left: 15em;
+            width: 8vw;
+          }
         }
       }
     }
@@ -159,9 +172,10 @@
     &--right {
       .whyMonq__content-item {
         position: relative;
+        align-self: flex-start;
 
         &:nth-child(odd) {
-          align-self: end;
+          align-self: center;
         }
       }
     }

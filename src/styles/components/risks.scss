@@ -64,6 +64,7 @@
   }
 
   &__item-text {
+    max-width: 33em;
     @include text8();
 
     @include respond-below(1280px) {

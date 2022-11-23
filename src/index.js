@@ -73,3 +73,12 @@ closeResultModal.addEventListener('click', () => {
   document.body.classList.remove('resultModal__non-scroll');
   resultModal.classList.remove('resultModal--active');
 });
+
+
+const text = document.querySelector('.textt');
+
+text.addEventListener('click', () => {
+  text.classList.toggle('yellow')
+  text.innerHTML = 'ffjjfjfjfjfjfj';
+})
+
