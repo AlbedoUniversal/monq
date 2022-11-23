@@ -124,18 +124,22 @@
 
   @include respond-above(720px) {
     font-size: $fs-25;
+    line-height: 25px;
   }
 
   @include respond-above(1280px) {
     font-size: $fs-13;
+    line-height: 13px;
   }
 
   @include respond-above(1920px) {
     font-size: $fs-20;
+    line-height: 20px;
   }
 
   @include respond-above(2560px) {
     font-size: $fs-30;
+    line-height: 30px;
   }
 }
 

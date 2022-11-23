@@ -88,7 +88,7 @@
     &:nth-child(odd) {
       & span {
         width: 17vw;
-        left: -7em;
+        left: -3em;
 
         &::before {
           width: 1.4em;
@@ -167,7 +167,7 @@
         &:nth-child(2) {
           align-self: flex-end;
           & span {
-            left: 15em;
+            left: 13em;
             width: 8vw;
           }
         }
