@@ -247,6 +247,35 @@
   }
 }
 
+@mixin text10($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+    line-height: 1.5;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+    line-height: 1.14;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+    line-height: 1.2;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+    line-height: 1;
+  }
+}
+
 @mixin resultTitle($args...) {
   $color: argsColorHandler($args);
   $fw: argsFwHandler($args, 900);
@@ -595,10 +624,10 @@
     $fw: list.nth($args, 2);
   }
 
-  @if (list.length($args)==1) {
+  @if (list.length($args) ==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first)=='number') {
+    @if (meta.type-of($first) == 'number') {
       $fw: $first;
     }
   }
@@ -617,10 +646,10 @@
     $color: list.nth($args, 1);
   }
 
-  @if (list.length($args)==1) {
+  @if (list.length($args) ==1) {
     $first: list.nth($args, 1);
 
-    @if (meta.type-of($first) !='number') {
+    @if (meta.type-of($first) != 'number') {
       $color: $first;
     }
   }

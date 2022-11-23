@@ -16,6 +16,11 @@
     gap: 2em;
   }
 
+  &__title {
+    text-transform: uppercase;
+    @include text10($c-white);
+  }
+
   &__subtitle {
     max-width: 26em;
 
