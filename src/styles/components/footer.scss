@@ -23,14 +23,11 @@
       justify-content: space-between;
     }
 
-    @media (max-width: 650px) {
-      flex-direction: column;
-      justify-content: space-between;
-    }
+
   }
 
   &__adress {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy-Regular';
     font-style: normal;
     font-weight: 500;
     font-size: fluid(15, 25);
@@ -44,7 +41,7 @@
 
   &__contacts-link {
     display: flex;
-    font-family: 'Gilroy';
+    font-family: 'Gilroy-Regular';
     font-style: normal;
     font-weight: 500;
     min-height: 64px;
@@ -62,7 +59,11 @@
   }
 
   li {
-    font-size: fluid(13, 25);
+    font-size: fluid(9, 25);
+  }
+
+  li::nth-child(3, 4) {
+    justify-content: end;
   }
 
   &__contacts-img {
