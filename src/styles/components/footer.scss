@@ -5,6 +5,10 @@
   padding: 0 rem(45);
   margin-top: 200px;
 
+  @media (max-width: 1100px) {
+    margin-top: 120px;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -37,6 +41,10 @@
 
   &__adress-link {
     min-height: 64px;
+
+    @media (max-width: 1100px) {
+      min-height: 30px;
+    }
   }
 
   &__contacts-link {
@@ -48,6 +56,10 @@
     font-size: fluid(13, 25);
     line-height: 24px;
     color: $c-black;
+
+    @media (max-width: 1100px) {
+      min-height: 30px;
+    }
   }
 
   &__contacts-link>a {
@@ -59,12 +71,10 @@
   }
 
   li {
-    font-size: fluid(9, 25);
+    font-size: fluid(7, 25);
   }
 
-  li::nth-child(3, 4) {
-    justify-content: end;
-  }
+
 
   &__contacts-img {
     width: 22px;
