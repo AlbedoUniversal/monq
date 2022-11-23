@@ -288,7 +288,7 @@
   font-weight: $fw;
   font-size: $fs-20;
 
-  @include respond-above(375px) {
+  @include respond-above(325px) {
     font-size: $fs-20;
     line-height: 20px;
   }
@@ -322,7 +322,7 @@
   font-weight: $fw;
   font-size: $fs-20;
 
-  @include respond-above(375px) {
+  @include respond-above(325px) {
     font-size: $fs-20;
     line-height: 20px;
   }
@@ -354,9 +354,9 @@
 
   color: $color;
   font-weight: $fw;
-  font-size: $fs-20;
+  font-size: $fs-40;
 
-  @include respond-above(375px) {
+  @include respond-above(320px) {
     font-size: $fs-40;
     line-height: 40px;
   }
@@ -458,7 +458,7 @@
   font-weight: $fw;
   font-size: $fs-15;
 
-  @include respond-above(375px) {
+  @include respond-above(320px) {
     font-size: $fs-15;
     line-height: 15px;
   }
@@ -619,6 +619,110 @@
     line-height: 25px;
   }
 }
+
+@mixin consultInput($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(325px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 35px;
+  }
+}
+
+@mixin invalidInput($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(325px) {
+    font-size: $fs-12;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-12;
+    line-height: 15px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-18;
+    line-height: 20px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+}
+
+@mixin checkboxText($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(325px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 24px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 24px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+}
+
+
 
 //Чтобы можно было докинуть один или два аргумента в миксинчик
 @function argsFwHandler($args, $initValue: 400) {

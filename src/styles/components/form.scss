@@ -7,7 +7,26 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: fluid(300, 750);
+
+    @include respond-above(325px) {
+      width: 350px;
+    }
+
+    @include respond-above(720px) {
+      width: 560px;
+    }
+
+    @include respond-above(1280px) {
+      width: 390px;
+    }
+
+    @include respond-above(1920px) {
+      width: 560px;
+    }
+
+    @include respond-above(2560px) {
+      width: 750px;
+    }
 
     @media (min-width: 1100px) {
       margin-right: 30px;
@@ -24,10 +43,8 @@
     flex-basis: 100%;
     position: absolute;
     display: none;
-    font-weight: 500;
-    color: #ff3b3b;
     flex-basis: 100%;
-    font-size: fluid(11, 25);
+    @include invalidInput(#ff3b3b);
   }
 
   &__button {
@@ -78,10 +95,10 @@
   }
 
   &__label-text {
-    font-size: fluid(11, 25);
+    @include checkboxText();
     color: #a0a0a0;
     text-decoration: underline;
-    font-family: 'Gilroy';
+    font-family: 'Gilroy-Regular';
   }
 
   @media screen and (min-width: 991px) {
@@ -101,8 +118,8 @@
   outline: none;
   padding: 1em;
   color: $c-black;
-  font-size: fluid(12, 30);
-  font-family: Gilroy;
+  @include consultInput($c-black);
+  font-family: 'Gilroy-Regular';
 }
 
 .relative {
@@ -127,12 +144,14 @@
   font-weight: 500;
   color: #ff3c3c;
   line-height: 97px;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Regular';
 }
 
 .consult__input::placeholder {
   color: $c-black;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Regular';
+  @include consultInput($c-black);
+
 }
 
 .consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
