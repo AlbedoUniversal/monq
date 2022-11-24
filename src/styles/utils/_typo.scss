@@ -1,0 +1,795 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:meta';
+
+@import './media.scss';
+@import './vars.scss';
+
+@mixin headingText($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-30;
+
+  @include respond-above(720px) {
+    font-size: $fs-60;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-45;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-70;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-85;
+  }
+}
+
+@mixin text1($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-16;
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+  }
+}
+
+@mixin text2($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+  }
+}
+
+@mixin text3($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-35;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-45;
+  }
+}
+
+@mixin text4($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+  }
+}
+
+@mixin text5($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-13;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-13;
+    line-height: 13px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
+@mixin text6($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-35;
+  }
+}
+
+@mixin text7($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+  }
+}
+
+@mixin text8($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
+@mixin text9($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-13;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+}
+
+@mixin text10($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+    line-height: 1.5;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+    line-height: 1.14;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+    line-height: 1.2;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+    line-height: 1;
+  }
+}
+@mixin text11($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-18;
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 40;
+  }
+}
+
+@mixin resultTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(325px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+    line-height: 40px;
+  }
+}
+
+@mixin resultDescr($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(325px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
+@mixin resultPercent($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-40;
+
+  @include respond-above(320px) {
+    font-size: $fs-40;
+    line-height: 40px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-80;
+    line-height: 80px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-60;
+    line-height: 60px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-80;
+    line-height: 80px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-90;
+    line-height: 90px;
+  }
+}
+
+@mixin resultButton($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 700);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-35;
+    line-height: 35px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-45;
+    line-height: 45px;
+  }
+}
+
+@mixin formButton($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 700);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(375px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 23px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+}
+
+@mixin resultModalTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 700);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(320px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-30;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-40;
+    line-height: 40px;
+  }
+}
+
+@mixin integrationTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-25;
+
+  @include respond-above(375px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+    line-height: 50px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-35;
+    line-height: 40px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-50;
+    line-height: 60px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-70;
+    line-height: 70px;
+  }
+}
+
+@mixin integrationDescr($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 300);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-35;
+    line-height: 35px;
+  }
+}
+
+@mixin integrationCircleTitle($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 900);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-20;
+
+  @include respond-above(375px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-40;
+    line-height: 50px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-30;
+    line-height: 35px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-40;
+    line-height: 50px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-50;
+    line-height: 50px;
+  }
+}
+
+@mixin integrationCircleDescr($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 700);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-11;
+
+  @include respond-above(375px) {
+    font-size: $fs-11;
+    line-height: 11px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-11;
+    line-height: 11px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 20px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-25;
+    line-height: 25px;
+  }
+}
+
+@mixin consultInput($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(325px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-30;
+    line-height: 35px;
+  }
+}
+
+@mixin invalidInput($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-15;
+
+  @include respond-above(325px) {
+    font-size: $fs-12;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-12;
+    line-height: 15px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-18;
+    line-height: 20px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-15;
+    line-height: 15px;
+  }
+}
+
+@mixin checkboxText($args...) {
+  $color: argsColorHandler($args);
+  $fw: argsFwHandler($args, 500);
+
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs-13;
+
+  @include respond-above(325px) {
+    font-size: $fs-13;
+    line-height: 15px;
+  }
+
+  @include respond-above(720px) {
+    font-size: $fs-20;
+    line-height: 24px;
+  }
+
+  @include respond-above(1280px) {
+    font-size: $fs-15;
+    line-height: 18px;
+  }
+
+  @include respond-above(1920px) {
+    font-size: $fs-20;
+    line-height: 24px;
+  }
+
+  @include respond-above(2560px) {
+    font-size: $fs-25;
+    line-height: 30px;
+  }
+}
+
+//Чтобы можно было докинуть один или два аргумента в миксинчик
+@function argsFwHandler($args, $initValue: 400) {
+  $fw: $initValue;
+
+  @if (list.length($args) > 1) {
+    $fw: list.nth($args, 2);
+  }
+
+  @if (list.length($args) ==1) {
+    $first: list.nth($args, 1);
+
+    @if (meta.type-of($first) == 'number') {
+      $fw: $first;
+    }
+  }
+
+  @return $fw;
+
+  @if (list.length($args) > 2) {
+    @error "максимум 2 аргумента";
+  }
+}
+
+@function argsColorHandler($args) {
+  $color: $c-dark;
+
+  @if (list.length($args) > 1) {
+    $color: list.nth($args, 1);
+  }
+
+  @if (list.length($args) ==1) {
+    $first: list.nth($args, 1);
+
+    @if (meta.type-of($first) != 'number') {
+      $color: $first;
+    }
+  }
+
+  @if (list.length($args) > 2) {
+    @error "максимум 2 аргумента";
+  }
+
+  @return $color;
+}

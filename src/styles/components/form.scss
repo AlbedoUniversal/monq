@@ -1,0 +1,184 @@
+.consult {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    gap: fluid(17, 30);
+
+    @include respond-above(325px) {
+      width: 350px;
+    }
+
+    @include respond-above(720px) {
+      width: 560px;
+    }
+
+    @include respond-above(1280px) {
+      width: 390px;
+    }
+
+    @include respond-above(1920px) {
+      width: 560px;
+    }
+
+    @include respond-above(2560px) {
+      width: 750px;
+    }
+
+    @media (min-width: 1100px) {
+      margin-right: 30px;
+    }
+  }
+
+  input[type='checkbox'i] {
+    display: none;
+  }
+
+  &__invalidText {
+    margin-top: 4px;
+    padding-left: 20px;
+    flex-basis: 100%;
+    position: absolute;
+    display: none;
+    flex-basis: 100%;
+    @include invalidInput(#ff3b3b);
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: $c-button;
+    text-transform: uppercase;
+    border-radius: 80px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    // padding: clamp(1.25rem, 0.469vw, 2.5rem);
+    padding: 1em;
+    font-family: 'Gilroy';
+    color: $c-white;
+    @include formButton(700, $c-white);
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+    margin-top: .5em;
+  }
+
+  // .disabled {
+  //   // background-color: #eaeaea;
+  //   color: $c-black;
+  //   cursor: default;
+  // }
+
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    padding-left: 10px;
+    cursor: pointer;
+    font-family: 'Gilroy';
+
+    @include respond-above('1440') {
+      padding-left: 20px;
+    }
+  }
+
+  &__circle {
+    height: 32px;
+    width: 32px;
+    border-radius: 80px;
+    border: 3px solid rgba(195, 195, 195, 1);
+    outline-offset: 5px;
+    margin-right: 13px;
+    flex-shrink: 0;
+  }
+
+  &__label-text {
+    @include checkboxText();
+    color: #a0a0a0;
+    text-decoration: underline;
+    font-family: 'Gilroy-Regular';
+  }
+
+  @media screen and (min-width: 991px) {
+    &__heading {
+      font-size: 46px;
+    }
+  }
+}
+
+.consult__input {
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 2px solid $c-black;
+  border-radius: 80px;
+  outline: none;
+  padding: 1em;
+  color: $c-black;
+  @include consultInput($c-black);
+  font-family: 'Gilroy-Regular';
+}
+
+.relative {
+  position: relative;
+
+  &--name,
+  &--surname {
+    @include respond-above('570') {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  display: none;
+  right: 23px;
+  font-family: Gilroy;
+  font-size: fluid(50, 80);
+  font-weight: 500;
+  color: #ff3c3c;
+  line-height: 97px;
+  font-family: 'Gilroy-Regular';
+}
+
+.consult__input::placeholder {
+  color: $c-black;
+  font-family: 'Gilroy-Regular';
+  @include consultInput($c-black);
+
+}
+
+.consult__input:invalid:not(:focus):not(:placeholder-shown)+.star {
+  display: block;
+}
+
+.consult__input--surname:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText,
+.consult__input--name:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
+  display: -webkit-box;
+}
+
+.consult__input:invalid:not(:focus):not(:placeholder-shown)~.consult__invalidText {
+  display: -webkit-box;
+}
+
+//checkbox
+
+.checkbox:checked+.consult__circle {
+  background: #d9d9d9;
+  border: 3px solid rgba(195, 195, 195, 1);
+}
+
+.succes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}

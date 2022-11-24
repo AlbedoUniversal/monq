@@ -4,22 +4,31 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Intime</title>
+		<title>MONQ</title>
 	</head>
 	<body>
 		<div id="main">
 			<!------ HEADER START ------>
-			<header class="header">
-			
-			</header>
-			<!------ HEADER END ------>
+
+				<%- include('./header.ejs'); %>
+
+				<%- include('./umbrellaMonitoring.ejs'); %>
+
+				<!------ HEADER END ------>
+				<%- include('./risks.ejs'); %>
+				<%- include('./whyMonq.ejs'); %>
 
 
-
+			<%- include('./integration.ejs'); %>
+			<%- include('./result.ejs'); %>
+			<section class="monitoring" id="6">
+				<%- include('./monitoring.ejs'); %>
+			</section>
 		<!------ FOOTER START ------>
 		<footer class="footer">
-
+			<%- include('./footer.ejs'); %>
 		</footer>
 		<!------ FOOTER END ------>
+		<script src="../index.js"></script>
 	</body>
 </html>

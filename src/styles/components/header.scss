@@ -1,0 +1,132 @@
+.header {
+  background-color: $c-light;
+  margin-left: auto;
+  margin-right: auto;
+  @include container();
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__logo {
+    height: rem(36);
+
+    @include respond-above(720px) {
+      height: rem(80);
+    }
+    @include respond-above(1280px) {
+      height: rem(52);
+    }
+    @include respond-above(1920) {
+      height: rem(80);
+    }
+    @include respond-above(2560px) {
+      height: rem(108);
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    gap: rem(60);
+    align-items: center;
+    & a {
+      @include text2($c-black, 700);
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+
+    @include text1(700);
+    @include respond-above(1280px) {
+      display: none;
+    }
+
+    &--near-menu {
+      display: none;
+      @include respond-above(1280px) {
+        display: block;
+      }
+    }
+
+    &--active {
+      visibility: visible;
+    }
+  }
+
+  &__inner {
+    padding: rem(34) 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    max-height: 0;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    display: flex;
+    gap: rem(15);
+    height: 100vh;
+    flex-direction: column;
+
+    &--active {
+      padding-inline: rem(60);
+      padding-block: rem(40);
+      max-height: 100vh;
+      transition: all 0.5s ease-in;
+    }
+  }
+
+  &__menu-burger {
+    display: flex;
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &--active span:nth-child(1) {
+      transform: rotate(40deg);
+    }
+
+    &--active span:nth-child(2) {
+      transform: scale(0);
+    }
+
+    &--active span:nth-child(3) {
+      transform: rotate(-40deg);
+    }
+
+    @include respond-above(2400px) {
+      transform: scale(2.1);
+    }
+  }
+
+  &__menu-item a {
+    text-transform: uppercase;
+    @include text1($c-black, 600);
+  }
+
+  &__menu-divider {
+    height: rem(6);
+    border-radius: 30px;
+    background-color: $c-grey;
+    border: none;
+  }
+
+  &__menu-burger span {
+    width: 1em;
+    height: 0.21em;
+    border-radius: 99px;
+    background: $c-black;
+    transition: 0.3s ease;
+    transform-origin: left;
+  }
+}

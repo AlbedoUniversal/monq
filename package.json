@@ -10,7 +10,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "webpack && git add dist && git commit -m 'deploy' && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "keywords": [],
   "author": "",
@@ -48,6 +48,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "lodash": "^4.17.21",
+    "sass": "^1.56.1",
     "tiny-slider": "^2.9.4"
   }
 }

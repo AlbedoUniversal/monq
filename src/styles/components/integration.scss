@@ -1,0 +1,80 @@
+.integration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    @include integrationTitle ($c-black);
+    text-align: center;
+    padding: 50px 0;
+
+    &::first-line {
+      color: #2F69FF;
+    }
+  }
+
+  &__descr {
+    @include integrationDescr();
+    padding: 0 40px 50px 40px;
+    text-align: center;
+  }
+
+  &__circle-svg {
+    margin-left: 120px;
+  }
+
+  &__circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__inside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    bottom: 95px;
+    left: 223px;
+    width: 217px;
+  }
+
+  &__inside-descr {
+    font-family: 'HelveticaNeueCyr';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2F69FF;
+  }
+
+  &__inside-logo {}
+
+
+
+  &__button {
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    @include text4($c-white);
+    padding: 0.7em 5em;
+    background-color: $c-accentOrange;
+    border-radius: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    margin: 4em 0;
+  }
+}
+
+.path {
+  &:hover {
+    stroke: #2F69FF;
+  }
+}

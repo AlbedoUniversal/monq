@@ -1,0 +1,134 @@
+.umbrellaMonitoring {
+  display: flex;
+  flex-direction: column;
+  background-color: $c-light;
+  gap: rem(27);
+  background-image: url('../assets/images/bg-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20%;
+
+  @include container();
+  @include respond-above(1280px) {
+    background-image: url('../assets/images/bg-image-desktop.png');
+    background-position: -5em -7em;
+  }
+
+  @include respond-above(1540px) {
+    background-position: -14em -8em;
+  }
+
+  @include respond-above(1695px) {
+    background-position: -9em -7em;
+    background-size: 80%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    position: relative;
+  }
+
+  &__title {
+    font-family: 'HelveticaNeueCyr-Bold';
+    text-transform: uppercase;
+    line-height: 1.17;
+
+    @include headingText($c-black, 900);
+    @include respond-above(1280px) {
+      max-width: 16em;
+    }
+
+    &--blue {
+      color: $c-blue;
+    }
+  }
+
+  &__sub-title {
+    @include text3();
+    @include respond-above(768px) {
+      max-width: 21em;
+    }
+  }
+
+  &__more {
+    font-family: 'HelveticaNeueCyr-Bold';
+    border: none;
+    @include text4();
+    padding: 0.7em 5em;
+    background-color: $c-accentOrange;
+    border-radius: 70px;
+    text-transform: uppercase;
+    color: $c-white;
+    cursor: pointer;
+    align-self: start;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+    @include respond-above(1280px) {
+      align-self: start;
+    }
+  }
+
+  &__advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(30);
+    margin-top: 3em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../assets/images/discount.png');
+      height: 8em;
+      width: 7em;
+      background-repeat: no-repeat;
+      right: -8em;
+      top: -2em;
+
+      @include respond-below(1280px) {
+        display: none;
+      }
+    }
+  }
+
+  &__advantages-item {
+    font-family: 'HelveticaNeueCyr-Black';
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include text5($c-dark);
+
+    @include respond-below(610px) {
+      flex-basis: auto;
+    }
+
+    @include respond-between(611px, 1280px) {
+      flex-basis: 33%;
+    }
+  }
+
+  &__advantages-divider {
+    height: 0.3em;
+    border-radius: 30px;
+    background-color: $c-blue;
+    width: 30%;
+    align-self: flex-start;
+    margin: 1em 0 0 0;
+    width: 40%;
+
+    @include respond-below(610px) {
+      width: 100%;
+    }
+  }
+
+  &__logo-monq {
+    @include text5($c-darkGrey);
+    transform: scale(0.6);
+    align-self: end;
+    padding-bottom: 1.4em;
+  }
+}

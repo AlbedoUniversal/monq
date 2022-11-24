@@ -1,0 +1,53 @@
+.monitoring {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 50px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    padding-top: 50px;
+
+    @include respond-above(325px) {
+      width: 100%;
+      margin-left: 20px;
+    }
+
+    @include respond-above(720px) {
+      width: 100%;
+      margin-left: 50px;
+    }
+
+    @include respond-above(1280px) {
+      width: 50%;
+    }
+
+    @include respond-above(1920px) {
+      width: 50%;
+    }
+
+    @include respond-above(2560px) {
+      width: 50%;
+    }
+  }
+
+  &__control-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+  }
+}
