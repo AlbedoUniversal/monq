@@ -25,7 +25,7 @@
     max-width: 26em;
 
     @include respond-above(1280px) {
-      max-width: 100%;
+      max-width: 60em;
     }
   }
 
@@ -45,7 +45,7 @@
   &__content-item {
     background-color: $c-white;
     border-radius: 40px;
-    padding: 1em;
+    padding: 2em;
     position: relative;
     z-index: 1;
     @include text9();
@@ -54,8 +54,11 @@
       max-width: 13em;
     }
     @include respond-above(1280px) {
-      width: 19.6em;
-      padding: 2em 3em;
+      width: 19.3em;
+      height: 6.8em;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
     }
 
     & span {
@@ -79,8 +82,8 @@
         position: absolute;
         border-radius: 50%;
         background-color: $c-white;
-        width: 1.8em;
-        height: 1.8em;
+        width: 1.4em;
+        height: 1.4em;
         transform: translateY(-50%);
       }
     }
@@ -91,8 +94,8 @@
         left: -3em;
 
         &::before {
-          width: 1.4em;
-          height: 1.4em;
+          width: 1.8em;
+          height: 1.8em;
         }
 
         @include respond-below(600px) {
@@ -131,6 +134,7 @@
   &__desktop {
     display: flex;
     gap: 3em;
+    justify-content: center;
     @include respond-below(1279px) {
       display: none;
     }
@@ -138,11 +142,12 @@
     & img {
       height: 18em;
 
-      @include respond-above(1620px) {
-        height: 30em;
+      @include respond-above(1920px) {
+        height: 24.6em;
       }
-      @include respond-above(2000px) {
-        height: 37em;
+
+      @include respond-above(2560px) {
+        height: 30.3em;
       }
     }
   }
@@ -151,8 +156,6 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    justify-content: space-between;
-    width: 100%;
     align-items: center;
 
     &--left {
@@ -161,14 +164,14 @@
 
         & span {
           rotate: 180deg;
-          left: 7em;
+          left: 16.6em;
         }
 
-        &:nth-child(2) {
-          align-self: flex-end;
+        &:nth-child(odd) {
+          transform: translateX(-3em);
           & span {
             left: 13em;
-            width: 8vw;
+            width: 13em;
           }
         }
       }
@@ -177,10 +180,17 @@
     &--right {
       .whyMonq__content-item {
         position: relative;
-        align-self: flex-start;
+
+        & span {
+          left: -2.2em;
+        }
 
         &:nth-child(odd) {
-          align-self: center;
+          transform: translateX(3em);
+
+          & span {
+            left: -6.6em;
+          }
         }
       }
     }
@@ -202,5 +212,12 @@
     @include respond-above(1280px) {
       align-self: center;
     }
+  }
+
+  &__footer-text {
+    text-transform: uppercase;
+    font-family: 'HelveticaNeueCyr-Black';
+    text-align: center;
+    @include text11($c-white);
   }
 }

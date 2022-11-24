@@ -19,7 +19,8 @@
   }
 
   @include respond-above(1695px) {
-    background-position: -13em -8em;
+    background-position: -9em -7em;
+    background-size: 80%;
   }
 
   &__text {
