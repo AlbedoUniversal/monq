@@ -6,7 +6,8 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+
+    gap: fluid(17, 30);
 
     @include respond-above(325px) {
       width: 350px;

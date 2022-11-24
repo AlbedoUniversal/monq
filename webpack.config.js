@@ -27,7 +27,7 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: `${PATHS.src}/html/index.ejs`,
     filename: './index.html', // './index.html' - devServer, 'html/index.html' - build // devMode ? './index.html' : 'html/index.html',
-    favicon: `${PATHS.src}/assets/icons/logo.svg`,
+    favicon: `${PATHS.src}/assets/icons/favicon.ico`,
   }),
 ];
 
