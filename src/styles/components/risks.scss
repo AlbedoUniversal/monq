@@ -28,11 +28,12 @@
   &__title {
     padding-top: 1.4em;
     padding-bottom: 0.9em;
-    font-family: 'HelveticaNeueCyr-Bold';
+    font-family: 'HelveticaNeueCyr-Black';
     text-align: center;
     text-transform: uppercase;
     max-width: 15em;
     @include text7(900);
+
     @include respond-above(1280px) {
       max-width: 80%;
     }
@@ -219,6 +220,7 @@
 
     &--active {
       border-color: $c-white;
+
       &::before {
         position: absolute;
         content: '';

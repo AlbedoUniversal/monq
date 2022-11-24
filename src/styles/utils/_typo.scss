@@ -694,10 +694,10 @@
 
   color: $color;
   font-weight: $fw;
-  font-size: $fs-15;
+  font-size: $fs-13;
 
   @include respond-above(325px) {
-    font-size: $fs-15;
+    font-size: $fs-13;
     line-height: 15px;
   }
 

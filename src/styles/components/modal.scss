@@ -25,9 +25,9 @@
     translate: all 0.3s ease;
   }
 
-  @include respond-below(720px) {
-    backdrop-filter: blur(40px);
-  }
+  // @include respond-below(720px) {
+  //   backdrop-filter: blur(40px);
+  // }
 
   &__title {
     font-family: 'HelveticaNeueCyr-Bold';
