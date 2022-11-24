@@ -16,6 +16,11 @@
     gap: 2em;
   }
 
+  &__title {
+    text-transform: uppercase;
+    @include text10($c-white);
+  }
+
   &__subtitle {
     max-width: 26em;
 
@@ -82,8 +87,8 @@
 
     &:nth-child(odd) {
       & span {
-        width: 17vw;
-        left: -7em;
+        width: 15vw;
+        left: -3em;
 
         &::before {
           width: 1.4em;
@@ -162,7 +167,7 @@
         &:nth-child(2) {
           align-self: flex-end;
           & span {
-            left: 15em;
+            left: 13em;
             width: 8vw;
           }
         }

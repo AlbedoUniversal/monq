@@ -93,7 +93,7 @@
   }
 
   &__advantages-item {
-    font-family: 'HelveticaNeueCyr-Bold';
+    font-family: 'HelveticaNeueCyr-Black';
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -128,5 +128,6 @@
     @include text5($c-darkGrey);
     transform: scale(0.6);
     align-self: end;
+    padding-bottom: 1.4em;
   }
 }
