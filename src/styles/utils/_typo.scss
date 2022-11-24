@@ -303,7 +303,7 @@
 
   @include respond-above(2560px) {
     font-size: $fs-30;
-    line-height: 40;
+    line-height: 40px;
   }
 }
 
