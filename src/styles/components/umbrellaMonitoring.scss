@@ -7,20 +7,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20%;
+  padding-top: 2em;
 
   @include container();
+
   @include respond-above(1280px) {
     background-image: url('../assets/images/bg-image-desktop.png');
-    background-position: -5em -7em;
+    background-size: auto;
+    background-position-y: 54%;
   }
 
-  @include respond-above(1540px) {
-    background-position: -14em -8em;
-  }
-
-  @include respond-above(1695px) {
-    background-position: -9em -7em;
-    background-size: 80%;
+  @include respond-above(1920px) {
+    background-size: 97em;
   }
 
   &__text {
