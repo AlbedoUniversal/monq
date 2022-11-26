@@ -1,7 +1,7 @@
 .monitoring {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 50px;
 
   @media (max-width: 1200px) {
@@ -19,12 +19,12 @@
 
     @include respond-above(325px) {
       width: 100%;
-      margin-left: 20px;
+      padding: 0 15px;
     }
 
     @include respond-above(720px) {
       width: 100%;
-      margin-left: 50px;
+      padding: 0 70px;
     }
 
     @include respond-above(1280px) {
