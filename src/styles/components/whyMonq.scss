@@ -9,7 +9,7 @@
 
   &__header {
     color: $c-white;
-    padding: 4em 0;
+    padding: 3em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
   }
 
   &__subtitle {
-    max-width: 20em;
+    max-width: 24em;
 
     @include respond-above(1280px) {
       max-width: 60em;
@@ -57,7 +57,7 @@
     @include text9();
 
     @include respond-below(719px) {
-      max-width: 20em;
+      max-width: 15em;
     }
     @include respond-above(1280px) {
       width: 19.3em;
@@ -246,7 +246,7 @@
     font-family: 'HelveticaNeueCyr-Bold';
     border: none;
     @include text4($c-white);
-    padding: 0.7em 5em;
+    padding: 0.7em 4em;
     background-color: $c-accentOrange;
     border-radius: 70px;
     text-transform: uppercase;
@@ -257,6 +257,7 @@
 
     @include respond-above(1280px) {
       align-self: center;
+      padding: 1em 4em;
     }
   }
 
