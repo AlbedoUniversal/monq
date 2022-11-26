@@ -6,12 +6,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include container();
+  @include makeStatic();
 
   @include respond-above(1280px) {
     background-image: url('../assets/images/bg-risk-desktop.jpg');
   }
-
-  @include container();
 
   &__mobile {
     @include respond-above(1280px) {

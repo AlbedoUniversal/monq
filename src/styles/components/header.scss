@@ -1,20 +1,25 @@
 .header {
   background-color: $c-light;
-  margin-left: auto;
-  margin-right: auto;
-  @include container();
+
+  &__wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    @include container();
+    @include makeStatic();
+  }
 
   &__nav {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 1em 0;
   }
 
   &__logo {
     height: rem(36);
 
     @include respond-above(720px) {
-      height: rem(80);
+      height: 3.4em;
     }
     @include respond-above(1280px) {
       height: rem(52);
@@ -30,7 +35,7 @@
   &__right-side {
     display: flex;
     gap: rem(60);
-    align-items: center;
+    align-items: flex-start;
     & a {
       @include text2($c-black, 700);
     }
@@ -38,7 +43,7 @@
 
   &__phone {
     position: absolute;
-    top: 0;
+    top: 0.4em;
     visibility: hidden;
 
     @include text1(700);
@@ -73,6 +78,8 @@
     gap: rem(15);
     height: 100vh;
     flex-direction: column;
+    @include makeStatic();
+    @include container();
 
     &--active {
       padding-inline: rem(60);
@@ -84,28 +91,36 @@
 
   &__menu-burger {
     display: flex;
-    width: 22px;
-    height: 16px;
     cursor: pointer;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
+    gap: 0.8em;
 
-    &--active span:nth-child(1) {
-      transform: rotate(40deg);
+    @include respond-above(1280px) {
+      gap: 0.6em;
     }
 
-    &--active span:nth-child(2) {
-      transform: scale(0);
-    }
+    & span {
+      width: 2em;
+      height: 0.3em;
+      border-radius: 99px;
+      background: $c-black;
+      transition: 0.3s ease;
+      transform-origin: left;
 
-    &--active span:nth-child(3) {
-      transform: rotate(-40deg);
-    }
-
-    @include respond-above(2400px) {
-      transform: scale(2.1);
+      @include respond-above(720px) {
+        width: 4em;
+        height: 0.6em;
+      }
+      @include respond-above(1280px) {
+        width: 2.8em;
+        height: 0.4em;
+      }
+      @include respond-above(1920px) {
+      }
+      @include respond-above(2560px) {
+      }
     }
   }
 
@@ -119,14 +134,5 @@
     border-radius: 30px;
     background-color: $c-grey;
     border: none;
-  }
-
-  &__menu-burger span {
-    width: 1em;
-    height: 0.21em;
-    border-radius: 99px;
-    background: $c-black;
-    transition: 0.3s ease;
-    transform-origin: left;
   }
 }
