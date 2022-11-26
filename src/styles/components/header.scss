@@ -34,7 +34,7 @@
 
   &__right-side {
     display: flex;
-    gap: rem(60);
+    gap: clamp(60px, 2em, 120px);
     align-items: flex-start;
     & a {
       @include text2($c-black, 700);
@@ -95,10 +95,18 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    gap: 0.8em;
+    gap: 0.4em;
 
-    @include respond-above(1280px) {
+    @include respond-above(720px) {
       gap: 0.6em;
+    }
+
+    @include respond-above(1920px) {
+      gap: 0.8em;
+    }
+
+    @include respond-above(2560px) {
+      gap: 1.2em;
     }
 
     & span {
@@ -118,8 +126,12 @@
         height: 0.4em;
       }
       @include respond-above(1920px) {
+        width: 4.1em;
+        height: 0.6em;
       }
       @include respond-above(2560px) {
+        width: 5.5em;
+        height: 0.8em;
       }
     }
   }
