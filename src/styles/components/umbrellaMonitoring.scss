@@ -88,13 +88,13 @@
     right: -8em;
     top: 2em;
 
-    @include respond-below(1280px) {
+    @include respond-below(1279px) {
       display: none;
     }
 
     @include respond-above(1920px) {
-      height: 10em;
-      width: 10em;
+      height: 12em;
+      width: 11em;
     }
   }
 

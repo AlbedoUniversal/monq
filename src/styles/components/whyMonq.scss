@@ -17,6 +17,7 @@
   }
 
   &__title {
+    font-family: 'HelveticaNeueCyr-Black';
     text-transform: uppercase;
     @include text10($c-white);
   }
@@ -123,7 +124,7 @@
 
     & img {
       margin: -9%;
-      height: 50em;
+      height: 60em;
 
       @include respond-below(600px) {
         display: none;
@@ -239,7 +240,7 @@
 
   &__logo-item {
     height: 3em;
-    width: 8em;
+    width: 7em;
     background-color: inherit;
 
     &:first-child {

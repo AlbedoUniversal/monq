@@ -229,6 +229,7 @@
   color: $color;
   font-weight: $fw;
   font-size: $fs-18;
+  line-height: 19.76px;
 
   @include respond-above(720px) {
     font-size: $fs-20;
