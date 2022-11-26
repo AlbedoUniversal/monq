@@ -1,26 +1,27 @@
 .umbrellaMonitoring {
-  display: flex;
-  flex-direction: column;
   background-color: $c-light;
-  gap: rem(27);
-  background-image: url('../assets/images/bg-image.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 20%;
 
-  @include container();
-  @include respond-above(1280px) {
-    background-image: url('../assets/images/bg-image-desktop.png');
-    background-position: -5em -7em;
-  }
+  &__wrapper {
+    background-image: url('../assets/images/bg-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(27);
 
-  @include respond-above(1540px) {
-    background-position: -14em -8em;
-  }
+    @include container();
+    @include makeStatic();
 
-  @include respond-above(1695px) {
-    background-position: -9em -7em;
-    background-size: 80%;
+    @include respond-above(1280px) {
+      background-image: url('../assets/images/bg-image-desktop.png');
+      background-size: cover;
+      background-position-y: 60%;
+      background-position-x: center;
+    }
+    @include respond-above(1920px) {
+      background-position-y: 40%;
+    }
   }
 
   &__text {
@@ -28,6 +29,7 @@
     flex-direction: column;
     gap: rem(20);
     position: relative;
+    padding-top: 2em;
   }
 
   &__title {
@@ -74,22 +76,25 @@
     display: flex;
     flex-wrap: wrap;
     gap: rem(30);
-    margin-top: 3em;
+    padding-top: 3em;
     position: relative;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../assets/images/discount.png');
-      height: 8em;
-      width: 7em;
-      background-repeat: no-repeat;
-      right: -8em;
-      top: -2em;
+  &__discount {
+    height: 8em;
+    width: 7em;
+    position: absolute;
+    cursor: pointer;
+    right: -8em;
+    top: 2em;
 
-      @include respond-below(1280px) {
-        display: none;
-      }
+    @include respond-below(1279px) {
+      display: none;
+    }
+
+    @include respond-above(1920px) {
+      height: 12em;
+      width: 11em;
     }
   }
 
@@ -106,7 +111,7 @@
       flex-basis: auto;
     }
 
-    @include respond-between(611px, 1280px) {
+    @include respond-between(611px, 1279px) {
       flex-basis: 33%;
     }
   }
@@ -118,7 +123,7 @@
     width: 30%;
     align-self: flex-start;
     margin: 1em 0 0 0;
-    width: 40%;
+    width: 30%;
 
     @include respond-below(610px) {
       width: 100%;
@@ -127,8 +132,9 @@
 
   &__logo-monq {
     @include text5($c-darkGrey);
-    transform: scale(0.6);
+    transform: scale(0.9);
     align-self: end;
-    padding-bottom: 1.4em;
+    padding: 1.4em 0;
+    margin-right: 5em;
   }
 }

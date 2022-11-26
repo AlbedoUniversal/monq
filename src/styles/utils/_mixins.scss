@@ -16,3 +16,54 @@
     padding: 0 rem(300);
   }
 }
+
+@mixin makeStatic {
+  @include respond-above(1280px) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  @include respond-above(1920px) {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  @include respond-above(2560px) {
+    max-width: 2560px;
+    margin: 0 auto;
+  }
+}
+
+@mixin distribute-on-circle($nb-items, $circle-size, $item-size) {
+  $half-item: ($item-size / 2);
+  $half-parent: ($circle-size / 2);
+
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+
+  > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $item-size;
+    height: $item-size;
+    margin: -$half-item;
+  }
+
+  $angle: (-80 / $nb-items);
+  $rot: 0;
+
+  @for $i from 1 through $nb-items {
+    > :nth-of-type(#{$i}) {
+      transform: rotate($rot * 1deg) translate($half-parent) rotate($rot * -1deg);
+    }
+
+    $rot: ($rot + $angle);
+  }
+}

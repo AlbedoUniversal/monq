@@ -1,40 +1,44 @@
 <section class="umbrellaMonitoring">
-  <div class="umbrellaMonitoring__text">
-    <p class="umbrellaMonitoring__title">
-      управляйте качеством <br />
-      ИТ-СЕРВИСОВ С&nbsp;ПОМОЩЬЮ
-      <span class="umbrellaMonitoring__title--blue"
-        >ЗОНТИЧНОГО МОНИТОРИНГА</span
-      >
-    </p>
-    <p class="umbrellaMonitoring__sub-title">
-      Комплексное технологическое решение для всех, кто несёт ответственность
-      за&nbsp;ИТ
-    </p>
+  <div class="umbrellaMonitoring__wrapper">
+    <div class="umbrellaMonitoring__text">
+      <p class="umbrellaMonitoring__title">
+        управляйте качеством <br />
+        ИТ-СЕРВИСОВ С&nbsp;ПОМОЩЬЮ
+        <span class="umbrellaMonitoring__title--blue">ЗОНТИЧНОГО МОНИТОРИНГА</span>
+      </p>
+      <p class="umbrellaMonitoring__sub-title">
+        Комплексное технологическое решение для всех, кто несёт ответственность за&nbsp;ИТ
+      </p>
+    </div>
+    <button class="umbrellaMonitoring__more openModalBtn">Узнать больше</button>
+    <ul class="umbrellaMonitoring__advantages-list">
+      <li class="umbrellaMonitoring__advantages-item">
+        Удовлетворённость внутренних и внешних пользователей
+        <hr class="umbrellaMonitoring__advantages-divider" />
+      </li>
+      <li class="umbrellaMonitoring__advantages-item">
+        Оптимизация затрат на обслуживание ИТ-инфраструктуры
+        <hr class="umbrellaMonitoring__advantages-divider" />
+      </li>
+      <li class="umbrellaMonitoring__advantages-item">
+        Снижение рисков за счёт использования полностью отечественного продукта
+        <hr class="umbrellaMonitoring__advantages-divider" />
+      </li>
+      <li class="umbrellaMonitoring__advantages-item">
+        Первые результаты внедрения уже через 4 недели
+        <hr class="umbrellaMonitoring__advantages-divider" />
+      </li>
+      <img
+        class="umbrellaMonitoring__discount openModalBtn"
+        src="../assets/images/discount.png"
+        alt=""
+      />
+    </ul>
+    <a href="https://monq.ru/" class="umbrellaMonitoring__logo-monq">
+      <p>при поддержке</p>
+      <img src="../assets/icons/logo-monq.svg" alt="логотип monq" />
+    </a>
   </div>
-  <button class="umbrellaMonitoring__more openModalBtn">Узнать больше</button>
-  <ul class="umbrellaMonitoring__advantages-list">
-    <li class="umbrellaMonitoring__advantages-item">
-      Удовлетворённость внутренних и внешних пользователей
-      <hr class="umbrellaMonitoring__advantages-divider" />
-    </li>
-    <li class="umbrellaMonitoring__advantages-item">
-      Оптимизация затрат на обслуживание ИТ-инфраструктуры
-      <hr class="umbrellaMonitoring__advantages-divider" />
-    </li>
-    <li class="umbrellaMonitoring__advantages-item">
-      Снижение рисков за счёт использования полностью отечественного продукта
-      <hr class="umbrellaMonitoring__advantages-divider" />
-    </li>
-    <li class="umbrellaMonitoring__advantages-item">
-      Первые результаты внедрения уже через 4 недели
-      <hr class="umbrellaMonitoring__advantages-divider" />
-    </li>
-  </ul>
-  <a href="https://monq.ru/" class="umbrellaMonitoring__logo-monq">
-    <p>при поддержке</p>
-    <img src="../assets/icons/logo-monq.svg" alt="логотип monq" />
-  </a>
 </section>
 <div class="modal">
   <div class="modal__wrapper">
@@ -102,9 +106,7 @@
               minlength="3"
             />
             <span class="star">*</span>
-            <p class="consult__invalidText">
-              Необходимо заполнить поле “Компания”
-            </p>
+            <p class="consult__invalidText">Необходимо заполнить поле “Компания”</p>
           </div>
           <div class="relative">
             <input
@@ -118,9 +120,7 @@
             />
             <span class="star">*</span>
 
-            <p class="consult__invalidText">
-              Необходимо заполнить поле “Телефон”
-            </p>
+            <p class="consult__invalidText">Необходимо заполнить поле “Телефон”</p>
           </div>
           <div class="relative">
             <input
@@ -132,9 +132,7 @@
             />
             <span class="star">*</span>
 
-            <p class="consult__invalidText">
-              Необходимо заполнить поле “Электронная почта”
-            </p>
+            <p class="consult__invalidText">Необходимо заполнить поле “Электронная почта”</p>
           </div>
           <div class="consult__in-half">
             <label class="consult__checkbox-label">
@@ -147,9 +145,7 @@
               />
               <span class="consult__circle"></span>
               <a href="/policy.pdf" target="_blank">
-                <span class="consult__label-text"
-                  >Согласен на обработку персональных данных</span
-                >
+                <span class="consult__label-text">Согласен на обработку персональных данных</span>
               </a>
             </label>
             <button class="consult__button disabled" type="submit">

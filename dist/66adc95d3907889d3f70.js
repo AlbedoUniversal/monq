@@ -75,5 +75,10 @@ closeResultModal.addEventListener('click', () => {
 });
 
 
+const text = document.querySelector('.textt');
 
+text.addEventListener('click', () => {
+  text.classList.toggle('yellow')
+  text.innerHTML = 'ffjjfjfjfjfjfj';
+})
 

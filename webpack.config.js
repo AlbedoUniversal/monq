@@ -52,7 +52,7 @@ module.exports = {
   output: {
     filename: 'js/[name].[contenthash].js',
     path: PATHS.dist,
-    publicPath: './', // devMode ? '/' : './',
+    publicPath: '/', // devMode ? '/' : './',
     // assetModuleFilename: 'src/[name][ext][query]'
   },
   stats: { children: true },

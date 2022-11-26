@@ -6,12 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include container();
 
   @include respond-above(1280px) {
     background-image: url('../assets/images/bg-risk-desktop.jpg');
   }
-
-  @include container();
 
   &__mobile {
     @include respond-above(1280px) {
@@ -156,9 +155,9 @@
     align-self: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     margin: 4em 0;
-    padding: 1.7em 5.5em;
 
     @include respond-above(1280px) {
+      padding: 1.7em 5.5em;
       align-self: end;
     }
   }
@@ -184,6 +183,7 @@
     padding: 0.8em 2em 0.8em 2em;
     width: 20em;
     cursor: pointer;
+    text-align: left;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
 
     @include text8($c-black);
@@ -228,7 +228,7 @@
         height: 1em;
         transform: translateY(-50%);
         top: 50%;
-        left: 22.5%;
+        left: 23.3%;
         border-radius: 50%;
         background-color: #fff;
       }
