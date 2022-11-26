@@ -214,10 +214,41 @@
     }
   }
 
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3em;
+  }
+
   &__footer-text {
     text-transform: uppercase;
     font-family: 'HelveticaNeueCyr-Black';
     text-align: center;
+    padding-bottom: 1em;
     @include text11($c-white);
+  }
+
+  &__logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo-item {
+    height: 3em;
+    width: 8em;
+    background-color: inherit;
+
+    &:first-child {
+      margin: -1.4em;
+      height: 5em;
+    }
+
+    @include respond-above(2560px) {
+      width: 12em;
+    }
   }
 }
