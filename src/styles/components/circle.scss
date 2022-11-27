@@ -1,16 +1,17 @@
 .advantages {
+  font-family: 'HelveticaNeueCyr';
   &-circle {
     @include distribute-on-circle(5, 20em, 2em);
     border: 2px solid #2f69ff;
 
     @include respond-below(720px) {
-      transform: scale(.55);
+      transform: scale(0.55);
       margin-top: -83px;
       margin-left: -73px;
     }
 
     @include respond-above(1200px) {
-      transform: scale(.85);
+      transform: scale(0.85);
       margin-left: -30px;
       margin-top: 20px;
     }
@@ -26,7 +27,6 @@
       transform: scale(1.7);
       margin-left: 122px;
     }
-
 
     &__element {
       width: 2em;
