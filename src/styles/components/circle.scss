@@ -42,20 +42,33 @@
     }
 
     &__text {
-      width: 14em;
+      width: 13em;
       color: black;
       transform: translate(53px, -24px);
       cursor: pointer;
+      font-family: 'HelveticaNeueCyr-Roman';
+      font-style: normal;
+      font-weight: 400;
 
       &:hover {
         color: #2f69ff;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-style: normal;
+        font-weight: 900;
+      }
+
+      &:focus {
+        color: #2f69ff;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-style: normal;
+        font-weight: 900;
       }
     }
 
     &__number {
       text-align: center;
       margin-top: 3px;
-      font-family: 'HelveticaNeueCyr';
+      font-family: 'HelveticaNeueCyr-Roman';
       font-style: normal;
       font-weight: 700;
     }
@@ -66,20 +79,22 @@
     top: 40%;
     width: 15em;
     display: none;
-    font-family: 'HelveticaNeueCyr';
+    font-family: 'HelveticaNeueCyr-Roman';
     font-style: normal;
     font-weight: 400;
 
     &--active {
       display: block;
+      // color: #2f69ff
     }
 
     &--default {
       @include circleTitleINside(#2f69ff);
       left: -4%;
       padding: 0 50px;
-      font-family: 'HelveticaNeueCyr';
+      font-family: 'HelveticaNeueCyr-Black';
       text-align: center;
+      text-transform: uppercase;
     }
   }
 }
