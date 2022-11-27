@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30px;
+  align-items: center;
+
+
 
   &__title {
     @include integrationTitle ($c-black);
     text-align: center;
-    padding: 50px 0;
+    padding: 25px 0;
 
     &::first-line {
       color: #2F69FF;
@@ -17,195 +19,62 @@
   &__descr {
     @include integrationDescr();
     padding: 0 40px 50px 40px;
-    text-align: center;
+    // text-align: center;
   }
 
   &__circle-svg {
     width: 570px;
     height: 100%;
+
+    @include respond-above(1200px) {
+      display: none;
+    }
+
+    @include respond-below(720px) {
+      width: 320px;
+    }
+
+  }
+
+  &__circleDesctop-svg {
+    width: 900px;
+    height: 100%;
+
+    @include respond-below(1200px) {
+      display: none;
+    }
+
+    @include respond-above(1200px) {
+      width: 465px;
+    }
+
+    @include respond-above(1920px) {
+      width: 675px;
+    }
+
+    @include respond-above(2560px) {
+      width: 900px;
+    }
+
   }
 
   &__circle {}
 
   &__circle-container {
     display: flex;
-    align-items: flex-end;
     position: relative;
-  }
+    flex-direction: column;
+    justify-content: center;
+    // left: -200px;
 
-
-  &__circle-item {
-    font-family: 'HelveticaNeueCyr';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-
-    &:nth-child(1) {
-      position: absolute;
-      left: 215px;
-      bottom: 258px;
+    @include respond-above(2560px) {
+      left: -135px;
     }
 
-    &:nth-child(2) {
-      position: absolute;
-      left: 274px;
-      bottom: 209px;
-    }
-
-    &:nth-child(3) {
-      position: absolute;
-      left: 304px;
-      bottom: 150px;
-    }
-
-    &:nth-child(4) {
-      position: absolute;
-      left: 304px;
-      bottom: 79px;
-    }
-
-    &:nth-child(5) {
-      position: absolute;
-      left: 280px;
-      bottom: 16px;
+    @include respond-above(1200px) {
+      flex-direction: row;
     }
   }
-
-
-  //   position: relative;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-  //   background-color: #2F69FF;
-  //   color: $c-white;
-  //   width: 520px;
-  //   height: 520px;
-  //   border-radius: 50%;
-  //   overflow: hidden;
-
-  //   @include respond-between(350px, 720px) {
-  //     width: 330px;
-  //     height: 330px;
-  //   }
-
-  //   @include respond-between(720px, 1280px) {
-  //     width: 520px;
-  //     height: 520px;
-  //   }
-
-  //   @include respond-between(1280px, 1920px) {
-  //     width: 390px;
-  //     height: 390px;
-  //   }
-
-  //   @include respond-above(2560px) {
-  //     width: 765px;
-  //     height: 765px;
-  //   }
-
-
-
-  //   &::before {
-  //     content: ' ';
-  //     position: absolute;
-  //     width: 100%;
-  //     height: 9px;
-  //     background-color: $c-white;
-  //     transform: translateY(-50%);
-  //     top: 55%;
-
-  //     @include respond-between(350px, 720px) {
-  //       height: 6px;
-  //     }
-
-  //     @include respond-between(720px, 1280px) {
-  //       height: 6px;
-  //     }
-
-  //     @include respond-between(1280px, 1920px) {
-  //       height: 6px;
-  //     }
-
-  //     @include respond-above(2560px) {
-  //       height: 13px;
-  //     }
-  //   }
-
-  //   &::after {
-  //     content: ' ';
-  //     position: absolute;
-  //     width: 100%;
-  //     height: 9px;
-  //     background-color: $c-white;
-  //     transform: translateY(-50%);
-  //     rotate: 90deg;
-  //     bottom: 50px;
-  //     border-radius: 60px;
-
-  //     @include respond-between(350px, 720px) {
-  //       height: 6px;
-  //       bottom: 36px;
-  //     }
-
-  //     @include respond-between(720px, 1280px) {
-  //       height: 6px;
-  //       bottom: 64px;
-  //     }
-
-  //     @include respond-between(1280px, 1920px) {
-  //       height: 6px;
-  //       bottom: 34px;
-  //     }
-
-  //     @include respond-above(2560px) {
-  //       height: 13px;
-  //       bottom: 97px;
-  //     }
-  //   }
-  // }
-
-  // &__circle-title {
-  //   @include integrationCircleTitle($c-white);
-  //   text-align: center;
-  //   padding: 35px 0;
-  // }
-
-  // &__circle-list {
-  //   padding-bottom: 60px;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-
-  //   @include respond-between(350px, 720px) {}
-
-  //   @include respond-between(720px, 1280px) {
-  //     padding-bottom: 105px;
-  //     padding-left: 15px;
-  //   }
-
-  //   @include respond-between(1280px, 1920px) {
-  //     padding-bottom: 94px;
-  //   }
-
-  //   @include respond-above(2560px) {
-  //     padding-bottom: 185px;
-  //   }
-  // }
-
-  // &__circle-item {
-  //   display: flex;
-  //   flex-basis: 46%;
-  //   justify-content: center;
-  //   padding: 1em;
-  //   @include integrationCircleDescr($c-white);
-
-  //   @include respond-above(2560px) {
-  //     padding: 1em;
-  //   }
-  // }
-
 
 
   &__button {
@@ -219,6 +88,14 @@
     cursor: pointer;
     align-self: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
-    margin: 4em 0;
+    margin: 0em 0 4em 48em;
+
+    @include respond-below(720px) {
+      margin: 0em 0em 3em 0em;
+    }
+
+    @include respond-below(1200px) {
+      margin: 4em 0em 4em 0em;
+    }
   }
 }

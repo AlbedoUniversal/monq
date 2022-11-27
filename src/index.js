@@ -77,6 +77,9 @@ closeResultModal.addEventListener('click', () => {
 const circleNumberBtnAll = document.querySelectorAll('.advantages-circle__text');
 const circleSlideAll = document.querySelectorAll('.advantages__slide');
 const advantagesBlock = document.querySelector('.advantages-circle');
+const resultBlock = document.querySelector('.result');
+const whyMonqBlock = document.querySelector('.whyMonq');
+
 
 for (let i = 0; i < circleNumberBtnAll.length; i++) {
   const circleNumberBtn = circleNumberBtnAll[i];
@@ -93,7 +96,14 @@ for (let i = 0; i < circleNumberBtnAll.length; i++) {
   });
 }
 
-advantagesBlock.addEventListener('mouseout', () => {
+resultBlock.addEventListener('mouseout', () => {
+  const circleSlideDefault = circleSlideAll[5];
+
+  deleteActiveClassFromAll(circleSlideAll, 'advantages__slide--active');
+  circleSlideDefault.classList.add('advantages__slide--active');
+});
+
+whyMonqBlock.addEventListener('mouseout', () => {
   const circleSlideDefault = circleSlideAll[5];
 
   deleteActiveClassFromAll(circleSlideAll, 'advantages__slide--active');
