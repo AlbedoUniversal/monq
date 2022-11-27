@@ -1,65 +1,19 @@
-<section class="integration">
+<section class="integration" id="integration">
   <h1 class="integration__title">
     Максимальная отдача <br />
     при профессиональном внедрении системы
   </h1>
   <p class="integration__descr">
-    Компания ЛАНИТ-Интеграция – эксперт в реализации высокотехнологичных
-    проектов. <br />
-    Мы внедряем эффективные ИТ-решения с учётом приоритетов и ресурсов наших
-    клиентов.
+    Компания ЛАНИТ-Интеграция – эксперт в реализации высокотехнологичных проектов. <br />
+    Мы внедряем эффективные ИТ-решения с учётом приоритетов и ресурсов наших клиентов.
   </p>
 
   <div class="integration__circle">
     <div class="integration__circle-container">
-      <%- include('./integrationCircleText.ejs'); %>
-      <!-- <div class="integration__circle-items">
-        <div class="integration__circle-item">Пилотное внедрение</div>
-        <div class="integration__circle-item">
-          Разработка <br />
-          проектного решения
-        </div>
-        <div class="integration__circle-item">
-          Полномасштабное <br />
-          развёртывание
-        </div>
-        <div class="integration__circle-item">
-          Внедрение <br />
-          в ИТ-ландшафт
-        </div>
-        <div class="integration__circle-item">
-          Подготовка к промышленной <br />
-          эксплуатации
-        </div>
-      </div> -->
+      <%-include('./integrationCircleTextDesctop.ejs');%> <%-include('./integrationCircleText.ejs');
+      %> <%-include('./circle.ejs');%>
     </div>
-    <!-- <h2 class="integration__circle-title">
-      НАША <br />
-      ЭКСПЕРТИЗА
-    </h2>
-    <ul class="integration__circle-list">
-      <li class="integration__circle-item">
-        Многолетний опыт внедрения решений для мониторинга ИТ различных классов
-      </li>
-      <li class="integration__circle-item">
-        Собственные компетенции по смежным системам (сети, СХД и т.д.)
-      </li>
-      <li class="integration__circle-item">Собственная тестовая лаборатория</li>
-      <li class="integration__circle-item">
-        Специалисты, сертифицированные по ключевым технологиям
-      </li>
-    </ul> -->
-    <!-- <div class="integration__inside">
-      <div class="integration__inside-descr">Этапы внедрения</div>
-      <img
-        class="integration__inside-logo"
-        src="../assets/icons/logo-grey.svg"
-        alt="logo"
-      />
-    </div> -->
   </div>
 
-  <button class="integration__button openModalBtn">
-    Получить консультацию
-  </button>
+  <button class="integration__button openModalBtn">Получить консультацию</button>
 </section>

@@ -1,3 +1,4 @@
+@use 'sass:math';
 @mixin container {
   padding: 0 rem(45);
   @include respond-above(720px) {
@@ -35,8 +36,8 @@
 }
 
 @mixin distribute-on-circle($nb-items, $circle-size, $item-size) {
-  $half-item: ($item-size / 2);
-  $half-parent: ($circle-size / 2);
+  $half-item: math.div($item-size, 2);
+  $half-parent: math.div($circle-size, 2);
 
   position: relative;
   width: $circle-size;
@@ -56,8 +57,8 @@
     margin: -$half-item;
   }
 
-  $angle: (-80 / $nb-items);
-  $rot: 0;
+  $angle: math.div(-180, $nb-items);
+  $rot: 70;
 
   @for $i from 1 through $nb-items {
     > :nth-of-type(#{$i}) {
