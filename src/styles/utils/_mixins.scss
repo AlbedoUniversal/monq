@@ -35,7 +35,7 @@
 }
 
 @mixin distribute-on-circle($nb-items, $circle-size, $item-size) {
-  $half-item: ($item-size / 4);
+  $half-item: ($item-size / 2);
   $half-parent: ($circle-size / 2);
 
   position: relative;
