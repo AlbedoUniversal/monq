@@ -258,7 +258,7 @@
 
   color: $color;
   font-weight: $fw;
-  font-size: $fs-18;
+  font-size: $fs-25;
 
   @include respond-above(720px) {
     font-size: $fs-40;

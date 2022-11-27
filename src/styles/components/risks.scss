@@ -34,7 +34,7 @@
     @include text7(900);
 
     @include respond-above(1280px) {
-      max-width: 80%;
+      max-width: 33em;
     }
 
     &--blue {
@@ -51,7 +51,7 @@
     text-align: center;
     @include text8($c-white);
 
-    @include respond-above(768px) {
+    @include respond-above(720px) {
       width: 22em;
       padding: 0.8em 4em;
     }
@@ -66,10 +66,6 @@
   &__item-text {
     max-width: 33em;
     @include text8();
-
-    @include respond-below(1280px) {
-      max-width: 22em;
-    }
   }
 
   &__inner {
@@ -77,7 +73,7 @@
     flex-direction: column;
     gap: 1.5em;
     padding: 2em 0;
-    max-width: 33em;
+    max-width: 25em;
   }
 
   &__list {
@@ -92,6 +88,7 @@
   }
 
   &__list-wrapper {
+    display: flex;
     flex-direction: column;
     width: 100%;
   }
@@ -99,6 +96,19 @@
   &__slide {
     display: none;
     gap: 3em;
+
+    & img {
+      max-width: 9.4em;
+      border-radius: 30px;
+
+      @include respond-above(1920px) {
+        max-width: 15.6em;
+      }
+
+      @include respond-above(2560px) {
+        max-width: 18.4em;
+      }
+    }
 
     &--active {
       display: flex;
@@ -108,8 +118,16 @@
   &__text-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 100%;
+    gap: 1em;
+
+    @include respond-above(1920px) {
+      gap: 1.5em;
+    }
+
+    @include respond-above(2560px) {
+      gap: 3.2em;
+    }
   }
 
   &__text-list-item {
@@ -117,8 +135,8 @@
     background-color: $radioBtn;
     border-radius: 60px;
     width: 100%;
-    padding: 2.4em 1em;
-    height: 3.8em;
+    padding: 1em 1em;
+    height: 3.2em;
     align-items: center;
     overflow: hidden;
     position: relative;
@@ -140,6 +158,15 @@
       display: flex;
       z-index: 1;
       height: 1.7em;
+      border-radius: 0;
+    }
+
+    @include respond-above(1920px) {
+      padding: 2.1em 1em;
+    }
+
+    @include respond-above(2560px) {
+      padding: 2.8em 1em;
     }
   }
 
@@ -170,6 +197,19 @@
     margin: 0;
     width: 100%;
     justify-content: space-between;
+
+    @include respond-above(2560px) {
+      &:first-child {
+        & button {
+          & span {
+            &:before {
+              top: 50%;
+              left: 14.4%;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__radio-btn {
@@ -180,7 +220,7 @@
     font-family: 'HelveticaNeueCyr-Bold';
     border: none;
     border-radius: 60px;
-    padding: 0.8em 2em 0.8em 2em;
+    padding: 0.8em 2.1em 0.8em 2em;
     width: 20em;
     cursor: pointer;
     text-align: left;
@@ -214,7 +254,7 @@
     height: 2em;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 2px solid $radioBtnCheckBox;
+    border: 0.3em solid $radioBtnCheckBox;
     border-radius: 50%;
     position: relative;
 
@@ -228,9 +268,14 @@
         height: 1em;
         transform: translateY(-50%);
         top: 50%;
-        left: 23.3%;
+        left: 16.3%;
         border-radius: 50%;
         background-color: #fff;
+
+        @include respond-above(2560px) {
+          top: 50%;
+          left: 14.8%;
+        }
       }
     }
   }

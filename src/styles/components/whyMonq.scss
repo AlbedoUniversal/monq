@@ -9,7 +9,7 @@
 
   &__header {
     color: $c-white;
-    padding: 4em 0;
+    padding: 3em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
   }
 
   &__subtitle {
-    max-width: 26em;
+    max-width: 24em;
 
     @include respond-above(1280px) {
       max-width: 60em;
@@ -35,7 +35,7 @@
     flex-direction: column;
     gap: 1em;
     color: $c-black;
-    margin-left: 10em;
+    margin-left: 26vw;
 
     @include respond-below(719px) {
       margin: 0;
@@ -44,15 +44,20 @@
   }
 
   &__content-item {
+    align-items: center;
+
+    display: flex;
     background-color: $c-white;
     border-radius: 40px;
-    padding: 2em;
+    width: 18.2em;
+    height: 6.7em;
     position: relative;
     z-index: 1;
+    padding: 0 1em;
     @include text9();
 
     @include respond-below(719px) {
-      max-width: 20em;
+      max-width: 15em;
     }
     @include respond-above(1280px) {
       width: 19.3em;
@@ -105,6 +110,45 @@
         }
       }
     }
+
+    @include respond-between(720px, 1279px) {
+      &:nth-child(1) {
+        & span {
+          width: 30vw;
+          left: -30vw;
+        }
+      }
+      &:nth-child(2) {
+        & span {
+          width: 30vw;
+          left: -23vw;
+        }
+      }
+      &:nth-child(3) {
+        & span {
+          width: 30vw;
+          left: -20vw;
+        }
+      }
+      &:nth-child(4) {
+        & span {
+          width: 30vw;
+          left: -16vw;
+        }
+      }
+      &:nth-child(5) {
+        & span {
+          width: 40vw;
+          left: -28vw;
+        }
+      }
+      &:nth-child(6) {
+        & span {
+          width: 39vw;
+          left: -32vw;
+        }
+      }
+    }
   }
 
   &__item-text {
@@ -123,8 +167,9 @@
     }
 
     & img {
-      margin: -9%;
-      height: 60em;
+      margin: -5em;
+      height: 72em;
+      transform: translateY(-6em);
 
       @include respond-below(719px) {
         display: none;
@@ -201,7 +246,7 @@
     font-family: 'HelveticaNeueCyr-Bold';
     border: none;
     @include text4($c-white);
-    padding: 0.7em 5em;
+    padding: 0.7em 4em;
     background-color: $c-accentOrange;
     border-radius: 70px;
     text-transform: uppercase;
@@ -212,6 +257,7 @@
 
     @include respond-above(1280px) {
       align-self: center;
+      padding: 1em 4em;
     }
   }
 
