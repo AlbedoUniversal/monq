@@ -65,13 +65,35 @@ closeModal.addEventListener('click', () => {
 });
 
 openResultModal.addEventListener('click', () => {
-  document.body.classList.add('resultModal__non-scroll');
+  document.body.classList.add('modal__non-scroll');
   resultModal.classList.add('resultModal--active');
 });
 
 closeResultModal.addEventListener('click', () => {
-  document.body.classList.remove('resultModal__non-scroll');
+  document.body.classList.remove('modal__non-scroll');
   resultModal.classList.remove('resultModal--active');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('modal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
+});
+
+resultModal.addEventListener('click', (e) => {
+  if (e.target === resultModal) {
+    resultModal.classList.remove('resultModal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
+});
+
+document.addEventListener('keyup', (e) => {
+  if (e.key === 'Escape') {
+    modal.classList.remove('modal--active');
+    resultModal.classList.remove('resultModal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
 });
 
 const circleNumberBtnAll = document.querySelectorAll('.advantages-circle__text');
@@ -79,7 +101,6 @@ const circleSlideAll = document.querySelectorAll('.advantages__slide');
 const advantagesBlock = document.querySelector('.advantages-circle');
 const resultBlock = document.querySelector('.result');
 const whyMonqBlock = document.querySelector('.whyMonq');
-
 
 for (let i = 0; i < circleNumberBtnAll.length; i++) {
   const circleNumberBtn = circleNumberBtnAll[i];
