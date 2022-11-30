@@ -14,10 +14,16 @@
     background-image: none;
   }
 
+  &__titleContainer {
+    padding: 0 0.4em 3em 0.4em;
+  }
+
   &__title {
     @include integrationTitle($c-black);
     text-align: center;
     padding: 25px 0;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeueCyr-Bold';
 
     &::first-line {
       color: #2f69ff;
@@ -26,7 +32,7 @@
 
   &__descr {
     @include integrationDescr();
-    padding: 0 40px 50px 40px;
+    // padding: 0 40px 50px 40px;
     // text-align: center;
   }
 

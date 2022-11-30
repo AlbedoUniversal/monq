@@ -50,8 +50,8 @@
     border: none;
     background: none;
     position: absolute;
-    top: -2.7em;
-    right: -3.5em;
+    top: -2em;
+    right: -2em;
     cursor: pointer;
 
     @include respond-below(720px) {
@@ -61,6 +61,7 @@
 
     & svg {
       height: 2.5em;
+      stroke: grey;
 
       & rect {
         fill: $c-white;
