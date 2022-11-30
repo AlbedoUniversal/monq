@@ -21,6 +21,8 @@ const allRadioBtn = document.querySelectorAll('.risks__radio-btn');
 const allRadioCheckbox = document.querySelectorAll('.risks__checkbox');
 const allSliders = document.querySelectorAll('.risks__slide');
 
+const allLink = document.querySelectorAll('.header__menu-item');
+
 phoneInput();
 postForm();
 
@@ -29,6 +31,15 @@ const deleteActiveClassFromAll = (list, className) => {
     button.classList.remove(`${className}`);
   }
 };
+
+for (let i = 0; i < allLink.length; i++) {
+  const link = allLink[i];
+
+  link.addEventListener('click', () => {
+    document.body.classList.remove('modal__non-scroll');
+    menu.classList.remove('header__menu--active');
+  });
+}
 
 for (let i = 0; i < openModal.length; i++) {
   openModal[i].addEventListener('click', () => {
@@ -56,6 +67,7 @@ for (let i = 0; i < allRadioBtn.length; i++) {
 menuBurger.addEventListener('click', () => {
   navigation.classList.toggle('header__menu-burger--active');
   menu.classList.toggle('header__menu--active');
+  document.body.classList.toggle('modal__non-scroll');
   phone.classList.toggle('header__phone--active');
 });
 
@@ -65,13 +77,35 @@ closeModal.addEventListener('click', () => {
 });
 
 openResultModal.addEventListener('click', () => {
-  document.body.classList.add('resultModal__non-scroll');
+  document.body.classList.add('modal__non-scroll');
   resultModal.classList.add('resultModal--active');
 });
 
 closeResultModal.addEventListener('click', () => {
-  document.body.classList.remove('resultModal__non-scroll');
+  document.body.classList.remove('modal__non-scroll');
   resultModal.classList.remove('resultModal--active');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('modal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
+});
+
+resultModal.addEventListener('click', (e) => {
+  if (e.target === resultModal) {
+    resultModal.classList.remove('resultModal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
+});
+
+document.addEventListener('keyup', (e) => {
+  if (e.key === 'Escape') {
+    modal.classList.remove('modal--active');
+    resultModal.classList.remove('resultModal--active');
+    document.body.classList.remove('modal__non-scroll');
+  }
 });
 
 const circleNumberBtnAll = document.querySelectorAll('.advantages-circle__text');
@@ -79,7 +113,6 @@ const circleSlideAll = document.querySelectorAll('.advantages__slide');
 const advantagesBlock = document.querySelector('.advantages-circle');
 const resultBlock = document.querySelector('.result');
 const whyMonqBlock = document.querySelector('.whyMonq');
-
 
 for (let i = 0; i < circleNumberBtnAll.length; i++) {
   const circleNumberBtn = circleNumberBtnAll[i];

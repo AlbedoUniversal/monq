@@ -21,6 +21,8 @@ const allRadioBtn = document.querySelectorAll('.risks__radio-btn');
 const allRadioCheckbox = document.querySelectorAll('.risks__checkbox');
 const allSliders = document.querySelectorAll('.risks__slide');
 
+const allLink = document.querySelectorAll('.header__menu-item');
+
 phoneInput();
 postForm();
 
@@ -29,6 +31,16 @@ const deleteActiveClassFromAll = (list, className) => {
     button.classList.remove(`${className}`);
   }
 };
+console.log(menuBurger);
+for (let i = 0; i < allLink.length; i++) {
+  const link = allLink[i];
+
+  link.addEventListener('click', () => {
+    document.body.classList.remove('modal__non-scroll');
+    navigation.classList.remove('header__menu-burger--active');
+    menu.classList.remove('header__menu--active');
+  });
+}
 
 for (let i = 0; i < openModal.length; i++) {
   openModal[i].addEventListener('click', () => {
@@ -56,6 +68,7 @@ for (let i = 0; i < allRadioBtn.length; i++) {
 menuBurger.addEventListener('click', () => {
   navigation.classList.toggle('header__menu-burger--active');
   menu.classList.toggle('header__menu--active');
+  document.body.classList.toggle('modal__non-scroll');
   phone.classList.toggle('header__phone--active');
 });
 

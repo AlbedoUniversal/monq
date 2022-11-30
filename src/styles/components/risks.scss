@@ -31,7 +31,7 @@
     text-align: center;
     text-transform: uppercase;
     max-width: 15em;
-    @include text7(900);
+    @include text7($c-black);
 
     @include respond-above(1280px) {
       max-width: 33em;
