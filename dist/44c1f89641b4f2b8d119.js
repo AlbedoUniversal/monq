@@ -31,7 +31,7 @@ const deleteActiveClassFromAll = (list, className) => {
     button.classList.remove(`${className}`);
   }
 };
-console.log(menuBurger);
+
 for (let i = 0; i < allLink.length; i++) {
   const link = allLink[i];
 

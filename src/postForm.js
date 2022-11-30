@@ -1,11 +1,11 @@
 /* eslint-disable import/prefer-default-export */
-const URL = "/form/send";
+const URL = '/form/send';
 
 const postData = async (url, data) => {
   const res = await fetch(url, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: data,
   });
@@ -14,59 +14,62 @@ const postData = async (url, data) => {
 };
 
 export function postForm() {
-  const form = document.querySelector("#form");
-  const inputs = form.querySelectorAll("input");
-  const button = form.querySelector("button");
+  const forms = document.querySelectorAll('#form');
 
-  function checkValid() {
-    let isError = inputs.length;
+  for (let i = 0; i < form.length; i++) {
+    const form = forms[i];
+
+    const inputs = form.querySelectorAll('input');
+    const button = form.querySelector('button');
+
+    function checkValid() {
+      let isError = inputs.length;
+
+      inputs.forEach((i) => {
+        if (i.validity.valid) {
+          isError--;
+        }
+      });
+      isError ? button.classList.add('disabled') : button.classList.remove('disabled');
+    }
 
     inputs.forEach((i) => {
-      if (i.validity.valid) {
-        isError--;
-      }
+      i.addEventListener('change', checkValid);
     });
-    isError
-      ? button.classList.add("disabled")
-      : button.classList.remove("disabled");
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+      postData(URL, json)
+        .then((data) => {
+          console.log(data);
+          form.innerHTML = `
+        <div class="succes__content">
+            <h2 class="succes__title">Заявка отправлена</h2>
+            <p class="succes__text">${createName(
+              formData,
+            )}, ваш запрос успешно отправлен. Наш менеджер свяжется с вами в ближайшее время.</p>
+        </div>
+      `;
+        })
+        .catch(() => {
+          form.innerHTML = `
+        <div class="succes__content">
+            <h2 class="succes__title">Что-то пошло не так…</h2>
+        </div>
+      `;
+        })
+        .finally(() => {
+          form.reset();
+        });
+    });
   }
-
-  inputs.forEach((i) => {
-    i.addEventListener("change", checkValid);
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
-    postData(URL, json)
-      .then((data) => {
-        console.log(data);
-        form.innerHTML = `
-			<div class="succes__content">
-					<h2 class="succes__title">Заявка отправлена</h2>
-					<p class="succes__text">${createName(
-            formData
-          )}, ваш запрос успешно отправлен. Наш менеджер свяжется с вами в ближайшее время.</p>
-			</div>
-	  `;
-      })
-      .catch(() => {
-        form.innerHTML = `
-			<div class="succes__content">
-					<h2 class="succes__title">Что-то пошло не так…</h2>
-			</div>
-	  `;
-      })
-      .finally(() => {
-        form.reset();
-      });
-  });
 }
 
 function createName(data) {
-  return `${data.get("name")} `;
+  return `${data.get('name')} `;
 }
