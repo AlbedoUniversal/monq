@@ -101,6 +101,10 @@
     gap: 0.4em;
 
     @include respond-above(720px) {
+      gap: 0.8em;
+    }
+
+    @include respond-above(1280px) {
       gap: 0.6em;
     }
 
@@ -110,6 +114,18 @@
 
     @include respond-above(2560px) {
       gap: 1.2em;
+    }
+
+    &--active {
+      & span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      & span:nth-child(2) {
+        transform: scale(0);
+      }
+      & span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
     }
 
     & span {
