@@ -31,12 +31,13 @@ const deleteActiveClassFromAll = (list, className) => {
     button.classList.remove(`${className}`);
   }
 };
-
+console.log(menuBurger);
 for (let i = 0; i < allLink.length; i++) {
   const link = allLink[i];
 
   link.addEventListener('click', () => {
     document.body.classList.remove('modal__non-scroll');
+    navigation.classList.remove('header__menu-burger--active');
     menu.classList.remove('header__menu--active');
   });
 }
