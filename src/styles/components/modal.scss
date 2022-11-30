@@ -61,8 +61,11 @@
 
     & svg {
       height: 2.5em;
+      stroke: gray;
+
       & rect {
         fill: $c-white;
+
         @include respond-below(720px) {
           fill: $closeModalBtn;
         }
