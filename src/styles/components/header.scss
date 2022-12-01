@@ -88,7 +88,7 @@
 
     @include respond-above(1280px) {
       justify-content: space-evenly;
-      height: 60vh;
+      height: 53%;
       padding-left: 3em;
     }
 
@@ -105,7 +105,10 @@
   }
 
   &__menu-item {
-    max-width: 20em;
+    max-width: 50%;
+    @include respond-above(1280px) {
+      max-width: 20em;
+    }
   }
 
   &__menu-burger {
