@@ -92,11 +92,14 @@
     background-color: white;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
     height: 100vh;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
     transform: translateX(102vw);
-    width: 33%;
     top: 0;
     right: 0;
+
+    @include respond-above(1280px) {
+      height: 100vh;
+    }
 
     @include respond-below(1280px) {
       width: 100%;
@@ -109,8 +112,12 @@
     &--active {
       opacity: 1;
       visibility: visible;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease-in;
       transform: translateX(0);
+
+      @include respond-above(1280px) {
+        width: 33%;
+      }
     }
   }
 
