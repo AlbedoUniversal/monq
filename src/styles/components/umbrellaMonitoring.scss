@@ -1,5 +1,10 @@
 .umbrellaMonitoring {
   background-color: $c-light;
+  padding-top: 6em;
+
+  @include respond-above(2460px) {
+    padding-top: 9em;
+  }
 
   &__wrapper {
     background-image: url('../assets/images/bg-image.png');

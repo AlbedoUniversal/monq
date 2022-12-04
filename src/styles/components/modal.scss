@@ -74,7 +74,9 @@
   }
 
   &__non-scroll {
-    overflow: hidden;
-    height: 100vh;
+    @include respond-below(1280px) {
+      overflow: hidden;
+      height: 100vh;
+    }
   }
 }

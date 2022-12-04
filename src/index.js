@@ -77,7 +77,7 @@ menuBurgerClose.addEventListener('click', () => {
   menu.classList.remove('header__menu--active');
   document.body.classList.remove('modal__non-scroll');
   phone.classList.remove('header__phone--active');
-})
+});
 
 closeModal.addEventListener('click', () => {
   document.body.classList.remove('modal__non-scroll');
