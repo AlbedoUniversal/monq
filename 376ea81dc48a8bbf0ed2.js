@@ -7,7 +7,9 @@ import { postForm } from './postForm.js';
 const navigation = document.querySelector('.header__nav');
 
 const menu = document.querySelector('.header__menu');
-const menuBurger = document.querySelector('.header__menu-burger');
+const menuBurger = document.querySelectorAll('.header__menu-burger');
+const menuBurgerClose = document.querySelector('.header__menu-burger--close');
+
 const phone = document.querySelector('.header__phone');
 const openModal = document.querySelectorAll('.openModalBtn');
 const modal = document.querySelector('.modal');
@@ -65,11 +67,16 @@ for (let i = 0; i < allRadioBtn.length; i++) {
   });
 }
 
-menuBurger.addEventListener('click', () => {
-  navigation.classList.toggle('header__menu-burger--active');
-  menu.classList.toggle('header__menu--active');
-  document.body.classList.toggle('modal__non-scroll');
-  phone.classList.toggle('header__phone--active');
+menuBurger[0].addEventListener('click', () => {
+  menu.classList.add('header__menu--active');
+  document.body.classList.add('modal__non-scroll');
+  phone.classList.add('header__phone--active');
+});
+
+menuBurgerClose.addEventListener('click', () => {
+  menu.classList.remove('header__menu--active');
+  document.body.classList.remove('modal__non-scroll');
+  phone.classList.remove('header__phone--active');
 });
 
 closeModal.addEventListener('click', () => {
